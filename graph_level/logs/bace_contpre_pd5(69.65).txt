@@ -1,0 +1,493 @@
+nohup: ignoring input
+PID[60515]
+========================================================================================================================
+total epoch:100 | head layer:3 | tasknet epoch:1 |tasknet lr:0.0005 | tasknet lr decay:down | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bace | 50-shots | contextpred.pth | seed:1 | runseed:1 | device:3
+TRAIN #-1: 30  #1: 20  #-1/#1: 1.5000
+VAL   #-1: 21  #1: 130  #-1/#1: 0.1615
+TEST  #-1: 71  #1: 81  #-1/#1: 0.8765
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 1.5000
+Dataset: 1513 | Train: 50  Val: 151  Test: 152
+Min Max Mean Median # nodes: 20 53 33.96 32.00 | 16 55 37.23 38.00 | 11 97 34.82 33.00
+First Train Data: Data(y=[1], fold=[1], x=[32, 2], id=[1], edge_index=[2, 72], edge_attr=[72, 2])
+==== Epoch01 AUC 68.33 61.14 73.41 | Loss 0.69304 0.68839 0.69130 | TEST P_min -0.081 P_max 0.082 P_norm 0.004463 P_Ratio 0.642
+==== Epoch20 AUC 85.33 66.08 71.43 | Loss 0.63928 0.79553 0.69529 | TEST P_min -0.347 P_max 0.347 P_norm 0.025031 P_Ratio 0.640
+==== Epoch21 AUC 85.83 65.90 71.33 | Loss 0.63569 0.80203 0.69633 | TEST P_min -0.362 P_max 0.352 P_norm 0.025333 P_Ratio 0.644
+==== Epoch22 AUC 86.00 65.46 71.24 | Loss 0.63237 0.80774 0.69714 | TEST P_min -0.349 P_max 0.357 P_norm 0.025957 P_Ratio 0.638
+==== Epoch23 AUC 86.50 65.46 71.29 | Loss 0.62880 0.81246 0.69784 | TEST P_min -0.379 P_max 0.404 P_norm 0.026583 P_Ratio 0.635
+==== Epoch24 AUC 87.17 65.38 71.36 | Loss 0.62509 0.81613 0.69839 | TEST P_min -0.368 P_max 0.415 P_norm 0.026797 P_Ratio 0.644
+==== Epoch25 AUC 87.00 65.49 71.36 | Loss 0.62183 0.82056 0.69918 | TEST P_min -0.377 P_max 0.451 P_norm 0.027491 P_Ratio 0.637
+==== Epoch26 AUC 87.83 65.68 71.27 | Loss 0.61815 0.82421 0.69992 | TEST P_min -0.350 P_max 0.412 P_norm 0.028284 P_Ratio 0.631
+==== Epoch27 AUC 87.83 65.57 71.26 | Loss 0.61479 0.82728 0.70060 | TEST P_min -0.349 P_max 0.413 P_norm 0.028496 P_Ratio 0.634
+==== Epoch28 AUC 88.17 65.68 71.27 | Loss 0.61142 0.82809 0.70055 | TEST P_min -0.374 P_max 0.473 P_norm 0.028716 P_Ratio 0.636
+==== Epoch29 AUC 88.50 65.79 71.21 | Loss 0.60773 0.83009 0.70094 | TEST P_min -0.376 P_max 0.450 P_norm 0.028777 P_Ratio 0.642
+==== Epoch30 AUC 88.83 65.64 71.05 | Loss 0.60406 0.83127 0.70131 | TEST P_min -0.488 P_max 0.508 P_norm 0.029169 P_Ratio 0.639
+==== Epoch31 AUC 88.83 65.86 70.94 | Loss 0.60038 0.83241 0.70173 | TEST P_min -0.391 P_max 0.413 P_norm 0.029683 P_Ratio 0.643
+==== Epoch32 AUC 89.33 65.68 71.07 | Loss 0.59654 0.83287 0.70173 | TEST P_min -0.385 P_max 0.480 P_norm 0.030172 P_Ratio 0.638
+==== Epoch33 AUC 88.83 65.42 70.96 | Loss 0.59287 0.83276 0.70192 | TEST P_min -0.412 P_max 0.422 P_norm 0.030506 P_Ratio 0.638
+==== Epoch34 AUC 89.17 65.38 70.93 | Loss 0.58863 0.83302 0.70213 | TEST P_min -0.408 P_max 0.442 P_norm 0.030597 P_Ratio 0.644
+==== Epoch35 AUC 89.17 65.53 70.87 | Loss 0.58498 0.83283 0.70227 | TEST P_min -0.415 P_max 0.371 P_norm 0.030776 P_Ratio 0.649
+==== Epoch36 AUC 89.17 65.46 70.77 | Loss 0.58168 0.83232 0.70238 | TEST P_min -0.518 P_max 0.647 P_norm 0.031542 P_Ratio 0.640
+==== Epoch37 AUC 90.00 65.20 70.81 | Loss 0.57722 0.82730 0.70076 | TEST P_min -0.421 P_max 0.427 P_norm 0.031662 P_Ratio 0.633
+==== Epoch38 AUC 89.83 65.24 70.72 | Loss 0.57375 0.82560 0.70056 | TEST P_min -0.460 P_max 0.515 P_norm 0.032008 P_Ratio 0.637
+==== Epoch39 AUC 90.17 65.24 70.75 | Loss 0.57062 0.82265 0.69977 | TEST P_min -0.461 P_max 0.538 P_norm 0.032375 P_Ratio 0.641
+==== Epoch40 AUC 90.50 65.20 70.67 | Loss 0.56683 0.81905 0.69897 | TEST P_min -0.410 P_max 0.432 P_norm 0.031878 P_Ratio 0.643
+==== Epoch41 AUC 90.50 64.91 70.74 | Loss 0.56345 0.81398 0.69718 | TEST P_min -0.500 P_max 0.499 P_norm 0.032215 P_Ratio 0.637
+==== Epoch42 AUC 90.83 65.24 70.68 | Loss 0.55952 0.81005 0.69639 | TEST P_min -0.438 P_max 0.497 P_norm 0.032788 P_Ratio 0.638
+==== Epoch43 AUC 91.00 65.27 70.65 | Loss 0.55711 0.80572 0.69526 | TEST P_min -0.437 P_max 0.435 P_norm 0.033068 P_Ratio 0.643
+==== Epoch44 AUC 91.17 65.42 70.28 | Loss 0.55354 0.80263 0.69461 | TEST P_min -0.426 P_max 0.502 P_norm 0.033264 P_Ratio 0.637
+==== Epoch45 AUC 91.17 65.31 70.32 | Loss 0.55106 0.79997 0.69414 | TEST P_min -0.586 P_max 0.593 P_norm 0.033393 P_Ratio 0.645
+==== Epoch46 AUC 91.50 65.42 70.28 | Loss 0.54763 0.79523 0.69250 | TEST P_min -0.388 P_max 0.444 P_norm 0.033876 P_Ratio 0.643
+==== Epoch47 AUC 91.00 65.16 70.23 | Loss 0.54427 0.79053 0.69162 | TEST P_min -0.440 P_max 0.420 P_norm 0.033988 P_Ratio 0.639
+==== Epoch48 AUC 91.17 65.16 70.23 | Loss 0.54105 0.78782 0.69095 | TEST P_min -0.428 P_max 0.412 P_norm 0.034537 P_Ratio 0.641
+==== Epoch49 AUC 91.33 65.35 70.25 | Loss 0.53808 0.78395 0.69001 | TEST P_min -0.390 P_max 0.490 P_norm 0.035490 P_Ratio 0.630
+==== Epoch50 AUC 91.33 65.13 70.23 | Loss 0.53365 0.78095 0.68971 | TEST P_min -0.488 P_max 0.417 P_norm 0.035381 P_Ratio 0.632
+==== Epoch51 AUC 91.33 65.20 70.28 | Loss 0.53074 0.77887 0.68933 | TEST P_min -0.439 P_max 0.415 P_norm 0.035292 P_Ratio 0.639
+==== Epoch52 AUC 91.33 65.31 70.32 | Loss 0.52790 0.77550 0.68878 | TEST P_min -0.433 P_max 0.418 P_norm 0.035905 P_Ratio 0.635
+==== Epoch53 AUC 91.50 65.49 70.16 | Loss 0.52479 0.77151 0.68809 | TEST P_min -0.483 P_max 0.493 P_norm 0.035895 P_Ratio 0.639
+==== Epoch54 AUC 91.50 65.60 70.14 | Loss 0.52098 0.77042 0.68882 | TEST P_min -0.412 P_max 0.405 P_norm 0.036420 P_Ratio 0.631
+==== Epoch55 AUC 91.50 65.46 70.11 | Loss 0.51787 0.76836 0.68910 | TEST P_min -0.435 P_max 0.459 P_norm 0.035897 P_Ratio 0.650
+==== Epoch56 AUC 91.50 65.68 70.11 | Loss 0.51479 0.76654 0.68952 | TEST P_min -0.443 P_max 0.460 P_norm 0.036998 P_Ratio 0.638
+==== Epoch57 AUC 91.50 65.79 70.14 | Loss 0.51194 0.76319 0.68854 | TEST P_min -0.462 P_max 0.472 P_norm 0.036551 P_Ratio 0.648
+==== Epoch58 AUC 91.67 65.75 70.21 | Loss 0.50931 0.76088 0.68865 | TEST P_min -0.438 P_max 0.453 P_norm 0.036920 P_Ratio 0.639
+==== Epoch59 AUC 91.67 65.71 70.04 | Loss 0.50577 0.75857 0.68918 | TEST P_min -0.467 P_max 0.449 P_norm 0.037125 P_Ratio 0.640
+==== Epoch60 AUC 91.67 65.71 70.06 | Loss 0.50312 0.75628 0.68880 | TEST P_min -0.532 P_max 0.475 P_norm 0.037690 P_Ratio 0.635
+==== Epoch61 AUC 91.67 65.71 69.94 | Loss 0.50014 0.75331 0.68934 | TEST P_min -0.520 P_max 0.512 P_norm 0.037627 P_Ratio 0.647
+==== Epoch62 AUC 91.83 65.79 70.01 | Loss 0.49718 0.75277 0.68977 | TEST P_min -0.522 P_max 0.487 P_norm 0.038721 P_Ratio 0.633
+==== Epoch63 AUC 92.17 65.64 69.95 | Loss 0.49294 0.75316 0.69151 | TEST P_min -0.547 P_max 0.454 P_norm 0.039158 P_Ratio 0.634
+==== Epoch64 AUC 92.17 65.75 69.80 | Loss 0.49029 0.75305 0.69294 | TEST P_min -0.638 P_max 0.593 P_norm 0.039574 P_Ratio 0.634
+==== Epoch65 AUC 92.33 65.79 69.74 | Loss 0.48690 0.75313 0.69382 | TEST P_min -0.483 P_max 0.468 P_norm 0.039221 P_Ratio 0.640
+==== Epoch66 AUC 92.17 65.79 69.67 | Loss 0.48407 0.75292 0.69499 | TEST P_min -0.513 P_max 0.505 P_norm 0.039458 P_Ratio 0.641
+==== Epoch67 AUC 92.33 65.64 69.52 | Loss 0.48170 0.75188 0.69650 | TEST P_min -0.440 P_max 0.455 P_norm 0.040090 P_Ratio 0.642
+==== Epoch68 AUC 92.50 65.57 69.43 | Loss 0.47891 0.75052 0.69699 | TEST P_min -0.536 P_max 0.497 P_norm 0.040759 P_Ratio 0.638
+==== Epoch69 AUC 92.67 66.01 69.50 | Loss 0.47564 0.75176 0.69938 | TEST P_min -0.549 P_max 0.518 P_norm 0.041117 P_Ratio 0.637
+==== Epoch70 AUC 92.50 65.68 69.31 | Loss 0.47346 0.74987 0.69993 | TEST P_min -0.441 P_max 0.482 P_norm 0.041913 P_Ratio 0.628
+==== Epoch71 AUC 92.50 65.82 69.10 | Loss 0.47225 0.74680 0.69990 | TEST P_min -0.612 P_max 0.564 P_norm 0.041379 P_Ratio 0.642
+==== Epoch72 AUC 92.50 65.82 69.19 | Loss 0.46993 0.74801 0.70146 | TEST P_min -0.620 P_max 0.601 P_norm 0.041578 P_Ratio 0.643
+==== Epoch73 AUC 92.67 65.64 69.12 | Loss 0.46687 0.74910 0.70295 | TEST P_min -0.473 P_max 0.442 P_norm 0.042499 P_Ratio 0.636
+==== Epoch74 AUC 92.50 65.71 69.05 | Loss 0.46504 0.75231 0.70592 | TEST P_min -0.480 P_max 0.473 P_norm 0.043115 P_Ratio 0.634
+==== Epoch75 AUC 92.67 65.53 69.03 | Loss 0.46270 0.75339 0.70751 | TEST P_min -0.476 P_max 0.475 P_norm 0.042733 P_Ratio 0.644
+==== Epoch76 AUC 92.83 65.49 69.00 | Loss 0.46134 0.75207 0.70777 | TEST P_min -0.511 P_max 0.473 P_norm 0.043030 P_Ratio 0.646
+==== Epoch77 AUC 93.00 65.49 68.89 | Loss 0.45838 0.74916 0.70758 | TEST P_min -0.470 P_max 0.474 P_norm 0.043618 P_Ratio 0.638
+==== Epoch78 AUC 93.00 65.86 69.01 | Loss 0.45661 0.74903 0.70859 | TEST P_min -0.458 P_max 0.476 P_norm 0.043490 P_Ratio 0.641
+==== Epoch79 AUC 92.83 65.53 68.94 | Loss 0.45573 0.74703 0.70850 | TEST P_min -0.492 P_max 0.500 P_norm 0.044561 P_Ratio 0.634
+==== Epoch80 AUC 93.17 65.86 69.00 | Loss 0.45384 0.74908 0.71051 | TEST P_min -0.545 P_max 0.556 P_norm 0.044779 P_Ratio 0.632
+==== Epoch81 AUC 93.00 65.75 68.93 | Loss 0.45220 0.74666 0.71027 | TEST P_min -0.458 P_max 0.470 P_norm 0.045440 P_Ratio 0.633
+==== Epoch82 AUC 93.00 65.64 69.00 | Loss 0.45039 0.74523 0.71009 | TEST P_min -0.485 P_max 0.530 P_norm 0.045473 P_Ratio 0.638
+==== Epoch83 AUC 93.00 65.46 68.93 | Loss 0.44911 0.74710 0.71204 | TEST P_min -0.561 P_max 0.555 P_norm 0.045871 P_Ratio 0.636
+==== Epoch84 AUC 93.50 65.42 68.93 | Loss 0.44760 0.74319 0.71047 | TEST P_min -0.483 P_max 0.512 P_norm 0.045834 P_Ratio 0.640
+==== Epoch85 AUC 93.50 65.82 68.93 | Loss 0.44612 0.74045 0.70999 | TEST P_min -0.483 P_max 0.525 P_norm 0.046654 P_Ratio 0.636
+==== Epoch86 AUC 93.50 65.46 68.93 | Loss 0.44548 0.73858 0.71005 | TEST P_min -0.503 P_max 0.498 P_norm 0.047191 P_Ratio 0.647
+==== Epoch87 AUC 93.83 65.31 68.84 | Loss 0.44538 0.73559 0.70973 | TEST P_min -0.471 P_max 0.476 P_norm 0.048133 P_Ratio 0.635
+==== Epoch88 AUC 93.50 65.60 68.82 | Loss 0.44405 0.73586 0.71056 | TEST P_min -0.477 P_max 0.466 P_norm 0.049305 P_Ratio 0.633
+==== Epoch89 AUC 93.83 65.46 68.84 | Loss 0.44283 0.73415 0.71092 | TEST P_min -0.583 P_max 0.587 P_norm 0.049488 P_Ratio 0.638
+==== Epoch90 AUC 93.67 65.46 68.84 | Loss 0.44289 0.73082 0.70992 | TEST P_min -0.583 P_max 0.575 P_norm 0.049284 P_Ratio 0.638
+==== Epoch91 AUC 93.83 65.60 68.84 | Loss 0.44355 0.72794 0.70866 | TEST P_min -0.483 P_max 0.476 P_norm 0.049983 P_Ratio 0.637
+==== Epoch92 AUC 93.83 65.64 68.82 | Loss 0.44244 0.72745 0.70794 | TEST P_min -0.528 P_max 0.474 P_norm 0.050735 P_Ratio 0.628
+==== Epoch93 AUC 93.83 65.68 68.86 | Loss 0.44211 0.72616 0.70772 | TEST P_min -0.484 P_max 0.495 P_norm 0.050775 P_Ratio 0.635
+==== Epoch94 AUC 93.67 65.75 68.81 | Loss 0.44240 0.72331 0.70693 | TEST P_min -0.482 P_max 0.491 P_norm 0.049988 P_Ratio 0.642
+==== Epoch95 AUC 93.83 65.53 68.81 | Loss 0.44256 0.72229 0.70642 | TEST P_min -0.533 P_max 0.531 P_norm 0.050722 P_Ratio 0.635
+==== Epoch96 AUC 93.83 65.57 68.79 | Loss 0.44068 0.72541 0.70847 | TEST P_min -0.501 P_max 0.547 P_norm 0.051101 P_Ratio 0.644
+==== Epoch97 AUC 93.83 65.42 68.89 | Loss 0.44146 0.72293 0.70680 | TEST P_min -0.479 P_max 0.483 P_norm 0.050577 P_Ratio 0.641
+==== Epoch98 AUC 93.83 65.49 68.72 | Loss 0.44172 0.72584 0.70932 | TEST P_min -0.587 P_max 0.543 P_norm 0.052088 P_Ratio 0.638
+==== Epoch99 AUC 93.83 65.42 68.84 | Loss 0.44053 0.72819 0.71011 | TEST P_min -0.596 P_max 0.599 P_norm 0.052379 P_Ratio 0.642
+==== Epoch100 AUC 93.83 65.49 68.81 | Loss 0.44072 0.72869 0.71016 | TEST P_min -0.591 P_max 0.538 P_norm 0.051720 P_Ratio 0.640
+====== BEST INFOS: EPOCH20 - TRAIN AUC 85.33 | VAL AUC 66.08 | TEST AUC 71.43
+
+
+========================================================================================================================
+total epoch:100 | head layer:3 | tasknet epoch:1 |tasknet lr:0.0005 | tasknet lr decay:down | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bace | 50-shots | contextpred.pth | seed:1 | runseed:2 | device:3
+TRAIN #-1: 30  #1: 20  #-1/#1: 1.5000
+VAL   #-1: 21  #1: 130  #-1/#1: 0.1615
+TEST  #-1: 71  #1: 81  #-1/#1: 0.8765
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 1.5000
+Dataset: 1513 | Train: 50  Val: 151  Test: 152
+Min Max Mean Median # nodes: 20 53 33.96 32.00 | 16 55 37.23 38.00 | 11 97 34.82 33.00
+First Train Data: Data(y=[1], fold=[1], x=[32, 2], id=[1], edge_index=[2, 72], edge_attr=[72, 2])
+==== Epoch01 AUC 48.50 52.97 56.51 | Loss 0.69453 0.68883 0.69250 | TEST P_min -0.098 P_max 0.112 P_norm 0.005089 P_Ratio 0.636
+==== Epoch20 AUC 85.33 64.25 69.99 | Loss 0.64486 0.80545 0.70111 | TEST P_min -0.363 P_max 0.340 P_norm 0.025843 P_Ratio 0.643
+==== Epoch21 AUC 86.33 64.36 70.09 | Loss 0.64143 0.81135 0.70159 | TEST P_min -0.434 P_max 0.375 P_norm 0.026745 P_Ratio 0.631
+==== Epoch22 AUC 86.50 64.43 70.14 | Loss 0.63815 0.81759 0.70223 | TEST P_min -0.387 P_max 0.368 P_norm 0.027386 P_Ratio 0.635
+==== Epoch23 AUC 86.33 64.29 70.13 | Loss 0.63474 0.82393 0.70312 | TEST P_min -0.382 P_max 0.374 P_norm 0.026638 P_Ratio 0.642
+==== Epoch24 AUC 86.50 64.25 70.16 | Loss 0.63121 0.82880 0.70367 | TEST P_min -0.340 P_max 0.370 P_norm 0.026894 P_Ratio 0.650
+==== Epoch25 AUC 86.83 64.32 69.97 | Loss 0.62790 0.83400 0.70437 | TEST P_min -0.444 P_max 0.432 P_norm 0.027988 P_Ratio 0.629
+==== Epoch26 AUC 87.00 64.03 70.04 | Loss 0.62442 0.83808 0.70488 | TEST P_min -0.443 P_max 0.396 P_norm 0.028004 P_Ratio 0.641
+==== Epoch27 AUC 87.67 64.25 70.04 | Loss 0.62099 0.84144 0.70533 | TEST P_min -0.444 P_max 0.400 P_norm 0.028570 P_Ratio 0.640
+==== Epoch28 AUC 87.67 63.81 70.07 | Loss 0.61760 0.84364 0.70540 | TEST P_min -0.359 P_max 0.356 P_norm 0.029170 P_Ratio 0.636
+==== Epoch29 AUC 88.00 64.03 70.01 | Loss 0.61416 0.84583 0.70573 | TEST P_min -0.497 P_max 0.492 P_norm 0.028784 P_Ratio 0.643
+==== Epoch30 AUC 88.17 64.03 70.09 | Loss 0.61125 0.84651 0.70563 | TEST P_min -0.362 P_max 0.387 P_norm 0.028767 P_Ratio 0.645
+==== Epoch31 AUC 88.17 63.81 69.88 | Loss 0.60824 0.84887 0.70626 | TEST P_min -0.413 P_max 0.392 P_norm 0.030157 P_Ratio 0.630
+==== Epoch32 AUC 88.33 63.59 69.69 | Loss 0.60524 0.84981 0.70645 | TEST P_min -0.465 P_max 0.438 P_norm 0.030522 P_Ratio 0.634
+==== Epoch33 AUC 88.67 64.10 69.78 | Loss 0.60109 0.85011 0.70634 | TEST P_min -0.458 P_max 0.419 P_norm 0.031089 P_Ratio 0.643
+==== Epoch34 AUC 88.67 63.55 69.71 | Loss 0.59843 0.84897 0.70595 | TEST P_min -0.474 P_max 0.461 P_norm 0.031444 P_Ratio 0.644
+==== Epoch35 AUC 89.00 63.33 69.80 | Loss 0.59462 0.84679 0.70516 | TEST P_min -0.411 P_max 0.432 P_norm 0.031376 P_Ratio 0.640
+==== Epoch36 AUC 89.17 63.63 69.74 | Loss 0.59155 0.84440 0.70438 | TEST P_min -0.403 P_max 0.404 P_norm 0.031364 P_Ratio 0.648
+==== Epoch37 AUC 89.00 63.30 69.38 | Loss 0.58801 0.84064 0.70332 | TEST P_min -0.422 P_max 0.401 P_norm 0.032129 P_Ratio 0.641
+==== Epoch38 AUC 89.17 63.48 69.55 | Loss 0.58499 0.83867 0.70237 | TEST P_min -0.385 P_max 0.437 P_norm 0.032643 P_Ratio 0.635
+==== Epoch39 AUC 89.33 63.44 69.33 | Loss 0.58150 0.83473 0.70138 | TEST P_min -0.399 P_max 0.386 P_norm 0.032189 P_Ratio 0.644
+==== Epoch40 AUC 89.83 63.04 69.47 | Loss 0.57772 0.83162 0.70031 | TEST P_min -0.415 P_max 0.459 P_norm 0.032412 P_Ratio 0.639
+==== Epoch41 AUC 89.67 63.41 69.33 | Loss 0.57462 0.82887 0.69973 | TEST P_min -0.389 P_max 0.405 P_norm 0.031873 P_Ratio 0.640
+==== Epoch42 AUC 89.50 63.44 69.29 | Loss 0.57165 0.82625 0.69905 | TEST P_min -0.446 P_max 0.470 P_norm 0.032066 P_Ratio 0.641
+==== Epoch43 AUC 90.17 62.89 69.07 | Loss 0.56814 0.82206 0.69823 | TEST P_min -0.507 P_max 0.416 P_norm 0.032289 P_Ratio 0.641
+==== Epoch44 AUC 90.17 62.97 69.10 | Loss 0.56509 0.81731 0.69709 | TEST P_min -0.418 P_max 0.416 P_norm 0.032457 P_Ratio 0.641
+==== Epoch45 AUC 90.67 62.60 69.03 | Loss 0.56097 0.81519 0.69662 | TEST P_min -0.429 P_max 0.390 P_norm 0.033065 P_Ratio 0.636
+==== Epoch46 AUC 91.17 62.71 68.96 | Loss 0.55712 0.81183 0.69588 | TEST P_min -0.394 P_max 0.410 P_norm 0.033423 P_Ratio 0.638
+==== Epoch47 AUC 91.00 62.75 69.00 | Loss 0.55379 0.80749 0.69478 | TEST P_min -0.496 P_max 0.426 P_norm 0.033784 P_Ratio 0.640
+==== Epoch48 AUC 90.83 62.56 68.98 | Loss 0.55139 0.80465 0.69426 | TEST P_min -0.455 P_max 0.472 P_norm 0.033190 P_Ratio 0.649
+==== Epoch49 AUC 91.17 62.38 68.84 | Loss 0.54718 0.80193 0.69390 | TEST P_min -0.516 P_max 0.494 P_norm 0.034282 P_Ratio 0.632
+==== Epoch50 AUC 91.00 63.30 68.84 | Loss 0.54320 0.79822 0.69266 | TEST P_min -0.450 P_max 0.462 P_norm 0.034092 P_Ratio 0.641
+==== Epoch51 AUC 91.33 62.64 68.89 | Loss 0.54011 0.79746 0.69305 | TEST P_min -0.435 P_max 0.426 P_norm 0.034279 P_Ratio 0.638
+==== Epoch52 AUC 91.17 62.67 68.60 | Loss 0.53673 0.79432 0.69344 | TEST P_min -0.427 P_max 0.458 P_norm 0.034938 P_Ratio 0.640
+==== Epoch53 AUC 91.67 62.86 68.72 | Loss 0.53179 0.79078 0.69246 | TEST P_min -0.417 P_max 0.430 P_norm 0.035093 P_Ratio 0.635
+==== Epoch54 AUC 91.83 63.11 68.68 | Loss 0.52925 0.78701 0.69192 | TEST P_min -0.413 P_max 0.406 P_norm 0.035276 P_Ratio 0.642
+==== Epoch55 AUC 92.00 62.78 68.72 | Loss 0.52598 0.78474 0.69177 | TEST P_min -0.450 P_max 0.443 P_norm 0.035285 P_Ratio 0.639
+==== Epoch56 AUC 92.17 62.89 68.82 | Loss 0.52175 0.78106 0.69099 | TEST P_min -0.632 P_max 0.616 P_norm 0.035931 P_Ratio 0.627
+==== Epoch57 AUC 92.00 62.64 68.75 | Loss 0.51817 0.78035 0.69082 | TEST P_min -0.386 P_max 0.399 P_norm 0.035724 P_Ratio 0.634
+==== Epoch58 AUC 92.00 62.86 68.63 | Loss 0.51388 0.77830 0.69189 | TEST P_min -0.463 P_max 0.451 P_norm 0.035862 P_Ratio 0.633
+==== Epoch59 AUC 92.00 62.71 68.68 | Loss 0.51006 0.77872 0.69219 | TEST P_min -0.571 P_max 0.561 P_norm 0.035471 P_Ratio 0.647
+==== Epoch60 AUC 92.17 62.78 68.58 | Loss 0.50530 0.77508 0.69191 | TEST P_min -0.425 P_max 0.473 P_norm 0.036886 P_Ratio 0.633
+==== Epoch61 AUC 92.33 63.22 68.79 | Loss 0.50325 0.77393 0.69201 | TEST P_min -0.437 P_max 0.473 P_norm 0.036688 P_Ratio 0.639
+==== Epoch62 AUC 92.17 62.78 68.54 | Loss 0.50054 0.77285 0.69274 | TEST P_min -0.470 P_max 0.467 P_norm 0.036793 P_Ratio 0.648
+==== Epoch63 AUC 91.67 63.08 68.49 | Loss 0.49727 0.77321 0.69400 | TEST P_min -0.433 P_max 0.438 P_norm 0.038328 P_Ratio 0.634
+==== Epoch64 AUC 92.00 63.15 68.60 | Loss 0.49413 0.77160 0.69372 | TEST P_min -0.407 P_max 0.426 P_norm 0.037899 P_Ratio 0.645
+==== Epoch65 AUC 92.17 62.97 68.67 | Loss 0.49096 0.76910 0.69409 | TEST P_min -0.514 P_max 0.527 P_norm 0.038358 P_Ratio 0.635
+==== Epoch66 AUC 92.33 63.52 68.61 | Loss 0.48726 0.76628 0.69425 | TEST P_min -0.407 P_max 0.423 P_norm 0.038505 P_Ratio 0.631
+==== Epoch67 AUC 92.50 62.89 68.44 | Loss 0.48556 0.76650 0.69536 | TEST P_min -0.516 P_max 0.518 P_norm 0.038287 P_Ratio 0.632
+==== Epoch68 AUC 93.00 62.64 68.58 | Loss 0.48083 0.76447 0.69528 | TEST P_min -0.401 P_max 0.431 P_norm 0.037676 P_Ratio 0.647
+==== Epoch69 AUC 92.83 62.89 68.51 | Loss 0.47900 0.76268 0.69563 | TEST P_min -0.415 P_max 0.455 P_norm 0.037730 P_Ratio 0.642
+==== Epoch70 AUC 93.00 62.71 68.51 | Loss 0.47679 0.76084 0.69493 | TEST P_min -0.459 P_max 0.433 P_norm 0.037970 P_Ratio 0.638
+==== Epoch71 AUC 93.17 63.26 68.51 | Loss 0.47373 0.75780 0.69459 | TEST P_min -0.452 P_max 0.489 P_norm 0.037874 P_Ratio 0.644
+==== Epoch72 AUC 93.33 63.04 68.61 | Loss 0.47138 0.75225 0.69249 | TEST P_min -0.535 P_max 0.555 P_norm 0.038946 P_Ratio 0.634
+==== Epoch73 AUC 93.33 63.19 68.48 | Loss 0.46911 0.74874 0.69209 | TEST P_min -0.524 P_max 0.547 P_norm 0.039600 P_Ratio 0.635
+==== Epoch74 AUC 93.17 62.75 68.53 | Loss 0.46876 0.74535 0.69069 | TEST P_min -0.485 P_max 0.469 P_norm 0.040345 P_Ratio 0.629
+==== Epoch75 AUC 93.17 62.93 68.51 | Loss 0.46617 0.74178 0.69040 | TEST P_min -0.457 P_max 0.451 P_norm 0.041353 P_Ratio 0.628
+==== Epoch76 AUC 93.00 62.78 68.39 | Loss 0.46506 0.74057 0.69065 | TEST P_min -0.477 P_max 0.475 P_norm 0.040256 P_Ratio 0.654
+==== Epoch77 AUC 93.33 62.49 68.54 | Loss 0.46411 0.73857 0.68988 | TEST P_min -0.454 P_max 0.438 P_norm 0.041048 P_Ratio 0.640
+==== Epoch78 AUC 93.50 62.56 68.49 | Loss 0.46131 0.73576 0.69025 | TEST P_min -0.444 P_max 0.425 P_norm 0.041606 P_Ratio 0.634
+==== Epoch79 AUC 93.33 62.64 68.48 | Loss 0.45894 0.73361 0.69052 | TEST P_min -0.542 P_max 0.546 P_norm 0.041962 P_Ratio 0.629
+==== Epoch80 AUC 93.50 62.60 68.65 | Loss 0.45832 0.72914 0.68879 | TEST P_min -0.463 P_max 0.475 P_norm 0.041992 P_Ratio 0.640
+==== Epoch81 AUC 93.50 62.71 68.16 | Loss 0.45531 0.72816 0.69092 | TEST P_min -0.483 P_max 0.492 P_norm 0.042709 P_Ratio 0.631
+==== Epoch82 AUC 93.33 62.71 68.34 | Loss 0.45399 0.72827 0.69130 | TEST P_min -0.510 P_max 0.467 P_norm 0.043057 P_Ratio 0.634
+==== Epoch83 AUC 93.50 62.38 68.20 | Loss 0.45348 0.72649 0.69100 | TEST P_min -0.460 P_max 0.484 P_norm 0.042130 P_Ratio 0.640
+==== Epoch84 AUC 93.17 62.78 68.32 | Loss 0.45220 0.72358 0.69083 | TEST P_min -0.465 P_max 0.476 P_norm 0.041975 P_Ratio 0.642
+==== Epoch85 AUC 93.50 62.16 68.18 | Loss 0.45082 0.72451 0.69080 | TEST P_min -0.534 P_max 0.485 P_norm 0.042359 P_Ratio 0.636
+==== Epoch86 AUC 93.50 62.60 68.04 | Loss 0.44831 0.72320 0.69231 | TEST P_min -0.438 P_max 0.436 P_norm 0.041658 P_Ratio 0.637
+==== Epoch87 AUC 93.83 62.34 68.09 | Loss 0.44757 0.72067 0.69158 | TEST P_min -0.507 P_max 0.493 P_norm 0.042268 P_Ratio 0.637
+==== Epoch88 AUC 93.67 62.01 67.94 | Loss 0.44802 0.72350 0.69310 | TEST P_min -0.500 P_max 0.465 P_norm 0.042103 P_Ratio 0.640
+==== Epoch89 AUC 93.67 62.12 67.90 | Loss 0.44594 0.72271 0.69363 | TEST P_min -0.504 P_max 0.467 P_norm 0.043099 P_Ratio 0.633
+==== Epoch90 AUC 93.67 62.56 67.97 | Loss 0.44450 0.72219 0.69442 | TEST P_min -0.537 P_max 0.527 P_norm 0.042510 P_Ratio 0.642
+==== Epoch91 AUC 93.17 62.20 68.06 | Loss 0.44661 0.72324 0.69435 | TEST P_min -0.484 P_max 0.486 P_norm 0.044138 P_Ratio 0.634
+==== Epoch92 AUC 93.83 62.56 67.99 | Loss 0.44435 0.71958 0.69362 | TEST P_min -0.575 P_max 0.591 P_norm 0.043563 P_Ratio 0.638
+==== Epoch93 AUC 93.50 62.38 67.95 | Loss 0.44296 0.71992 0.69377 | TEST P_min -0.560 P_max 0.571 P_norm 0.045004 P_Ratio 0.632
+==== Epoch94 AUC 93.67 63.04 67.95 | Loss 0.44396 0.71797 0.69306 | TEST P_min -0.484 P_max 0.486 P_norm 0.046053 P_Ratio 0.632
+==== Epoch95 AUC 93.67 62.31 67.87 | Loss 0.44214 0.72040 0.69460 | TEST P_min -0.468 P_max 0.507 P_norm 0.046420 P_Ratio 0.637
+==== Epoch96 AUC 93.83 62.67 67.87 | Loss 0.44155 0.71985 0.69415 | TEST P_min -0.555 P_max 0.539 P_norm 0.046903 P_Ratio 0.636
+==== Epoch97 AUC 93.50 62.27 67.97 | Loss 0.44200 0.72168 0.69621 | TEST P_min -0.575 P_max 0.573 P_norm 0.046662 P_Ratio 0.637
+==== Epoch98 AUC 93.83 62.31 67.80 | Loss 0.44044 0.72022 0.69545 | TEST P_min -0.681 P_max 0.690 P_norm 0.048515 P_Ratio 0.635
+==== Epoch99 AUC 94.00 62.67 68.08 | Loss 0.44042 0.71865 0.69538 | TEST P_min -0.620 P_max 0.584 P_norm 0.050899 P_Ratio 0.643
+==== Epoch100 AUC 94.00 61.98 67.95 | Loss 0.43956 0.71977 0.69551 | TEST P_min -0.492 P_max 0.494 P_norm 0.052732 P_Ratio 0.629
+====== BEST INFOS: EPOCH22 - TRAIN AUC 86.50 | VAL AUC 64.43 | TEST AUC 70.14
+
+
+========================================================================================================================
+total epoch:100 | head layer:3 | tasknet epoch:1 |tasknet lr:0.0005 | tasknet lr decay:down | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bace | 50-shots | contextpred.pth | seed:1 | runseed:3 | device:3
+TRAIN #-1: 30  #1: 20  #-1/#1: 1.5000
+VAL   #-1: 21  #1: 130  #-1/#1: 0.1615
+TEST  #-1: 71  #1: 81  #-1/#1: 0.8765
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 1.5000
+Dataset: 1513 | Train: 50  Val: 151  Test: 152
+Min Max Mean Median # nodes: 20 53 33.96 32.00 | 16 55 37.23 38.00 | 11 97 34.82 33.00
+First Train Data: Data(y=[1], fold=[1], x=[32, 2], id=[1], edge_index=[2, 72], edge_attr=[72, 2])
+==== Epoch01 AUC 56.33 53.22 53.40 | Loss 0.68746 0.71311 0.69514 | TEST P_min -0.072 P_max 0.080 P_norm 0.004670 P_Ratio 0.634
+==== Epoch20 AUC 86.33 63.41 69.62 | Loss 0.63526 0.83514 0.70933 | TEST P_min -0.422 P_max 0.392 P_norm 0.025319 P_Ratio 0.635
+==== Epoch21 AUC 86.33 63.85 69.80 | Loss 0.63202 0.83943 0.70980 | TEST P_min -0.314 P_max 0.318 P_norm 0.025333 P_Ratio 0.635
+==== Epoch22 AUC 86.50 63.85 70.01 | Loss 0.62879 0.84471 0.71079 | TEST P_min -0.337 P_max 0.329 P_norm 0.025448 P_Ratio 0.636
+==== Epoch23 AUC 86.67 63.92 69.99 | Loss 0.62552 0.84912 0.71176 | TEST P_min -0.386 P_max 0.326 P_norm 0.025370 P_Ratio 0.645
+==== Epoch24 AUC 87.00 63.88 70.07 | Loss 0.62198 0.85366 0.71262 | TEST P_min -0.402 P_max 0.379 P_norm 0.026017 P_Ratio 0.643
+==== Epoch25 AUC 86.83 63.77 69.99 | Loss 0.61856 0.85736 0.71351 | TEST P_min -0.441 P_max 0.360 P_norm 0.026630 P_Ratio 0.631
+==== Epoch26 AUC 87.17 64.03 69.92 | Loss 0.61486 0.85967 0.71408 | TEST P_min -0.396 P_max 0.425 P_norm 0.026715 P_Ratio 0.640
+==== Epoch27 AUC 87.50 64.36 69.87 | Loss 0.61105 0.86262 0.71479 | TEST P_min -0.437 P_max 0.493 P_norm 0.027132 P_Ratio 0.640
+==== Epoch28 AUC 87.50 64.65 69.95 | Loss 0.60774 0.86471 0.71533 | TEST P_min -0.402 P_max 0.416 P_norm 0.027729 P_Ratio 0.635
+==== Epoch29 AUC 87.33 64.73 69.99 | Loss 0.60367 0.86416 0.71525 | TEST P_min -0.397 P_max 0.375 P_norm 0.028451 P_Ratio 0.628
+==== Epoch30 AUC 88.00 64.62 69.95 | Loss 0.59923 0.86266 0.71455 | TEST P_min -0.383 P_max 0.354 P_norm 0.028404 P_Ratio 0.637
+==== Epoch31 AUC 87.67 64.69 69.95 | Loss 0.59588 0.85885 0.71338 | TEST P_min -0.510 P_max 0.445 P_norm 0.028587 P_Ratio 0.639
+==== Epoch32 AUC 88.17 64.84 69.78 | Loss 0.59209 0.85574 0.71258 | TEST P_min -0.368 P_max 0.392 P_norm 0.028944 P_Ratio 0.635
+==== Epoch33 AUC 88.33 64.95 69.80 | Loss 0.58891 0.85161 0.71130 | TEST P_min -0.358 P_max 0.371 P_norm 0.028662 P_Ratio 0.637
+==== Epoch34 AUC 88.17 65.16 69.76 | Loss 0.58499 0.84640 0.70987 | TEST P_min -0.416 P_max 0.364 P_norm 0.028540 P_Ratio 0.643
+==== Epoch35 AUC 88.83 65.24 69.73 | Loss 0.58187 0.84244 0.70877 | TEST P_min -0.365 P_max 0.347 P_norm 0.028661 P_Ratio 0.645
+==== Epoch36 AUC 89.00 65.09 69.87 | Loss 0.57855 0.83814 0.70768 | TEST P_min -0.375 P_max 0.369 P_norm 0.029294 P_Ratio 0.641
+==== Epoch37 AUC 89.00 65.20 69.71 | Loss 0.57484 0.83236 0.70607 | TEST P_min -0.405 P_max 0.411 P_norm 0.029415 P_Ratio 0.633
+==== Epoch38 AUC 88.67 65.35 69.67 | Loss 0.57184 0.82614 0.70422 | TEST P_min -0.416 P_max 0.416 P_norm 0.029443 P_Ratio 0.641
+==== Epoch39 AUC 88.83 65.60 69.64 | Loss 0.56832 0.82079 0.70256 | TEST P_min -0.403 P_max 0.444 P_norm 0.029706 P_Ratio 0.643
+==== Epoch40 AUC 88.50 65.57 69.54 | Loss 0.56502 0.81672 0.70189 | TEST P_min -0.453 P_max 0.449 P_norm 0.029519 P_Ratio 0.643
+==== Epoch41 AUC 88.83 65.97 69.48 | Loss 0.56168 0.81286 0.70125 | TEST P_min -0.380 P_max 0.368 P_norm 0.029693 P_Ratio 0.636
+==== Epoch42 AUC 89.00 65.68 69.34 | Loss 0.55801 0.80868 0.70061 | TEST P_min -0.336 P_max 0.379 P_norm 0.029499 P_Ratio 0.647
+==== Epoch43 AUC 89.00 65.71 69.34 | Loss 0.55462 0.80307 0.69921 | TEST P_min -0.446 P_max 0.488 P_norm 0.030481 P_Ratio 0.633
+==== Epoch44 AUC 89.33 65.86 69.31 | Loss 0.55136 0.79810 0.69804 | TEST P_min -0.465 P_max 0.416 P_norm 0.030723 P_Ratio 0.633
+==== Epoch45 AUC 89.33 65.68 69.33 | Loss 0.54871 0.79525 0.69739 | TEST P_min -0.385 P_max 0.390 P_norm 0.030595 P_Ratio 0.641
+==== Epoch46 AUC 89.50 65.68 69.34 | Loss 0.54544 0.79113 0.69685 | TEST P_min -0.456 P_max 0.410 P_norm 0.030929 P_Ratio 0.639
+==== Epoch47 AUC 89.83 65.90 69.08 | Loss 0.54171 0.78803 0.69675 | TEST P_min -0.473 P_max 0.480 P_norm 0.031237 P_Ratio 0.638
+==== Epoch48 AUC 90.00 65.79 69.00 | Loss 0.53839 0.78545 0.69660 | TEST P_min -0.406 P_max 0.434 P_norm 0.032064 P_Ratio 0.632
+==== Epoch49 AUC 90.00 65.71 69.03 | Loss 0.53513 0.78313 0.69656 | TEST P_min -0.545 P_max 0.458 P_norm 0.031811 P_Ratio 0.644
+==== Epoch50 AUC 89.83 65.71 68.89 | Loss 0.53099 0.78257 0.69799 | TEST P_min -0.429 P_max 0.406 P_norm 0.033078 P_Ratio 0.629
+==== Epoch51 AUC 90.17 65.71 68.84 | Loss 0.52725 0.78209 0.69900 | TEST P_min -0.445 P_max 0.411 P_norm 0.032887 P_Ratio 0.642
+==== Epoch52 AUC 90.67 65.79 68.70 | Loss 0.52268 0.78001 0.69979 | TEST P_min -0.512 P_max 0.537 P_norm 0.033069 P_Ratio 0.646
+==== Epoch53 AUC 90.67 65.86 68.68 | Loss 0.51953 0.77869 0.70046 | TEST P_min -0.450 P_max 0.420 P_norm 0.034217 P_Ratio 0.638
+==== Epoch54 AUC 90.67 65.79 68.74 | Loss 0.51443 0.77850 0.70159 | TEST P_min -0.443 P_max 0.423 P_norm 0.033959 P_Ratio 0.638
+==== Epoch55 AUC 91.00 65.71 68.70 | Loss 0.51121 0.77481 0.70129 | TEST P_min -0.437 P_max 0.480 P_norm 0.034156 P_Ratio 0.640
+==== Epoch56 AUC 91.00 66.01 68.58 | Loss 0.50784 0.77371 0.70288 | TEST P_min -0.469 P_max 0.460 P_norm 0.034411 P_Ratio 0.644
+==== Epoch57 AUC 91.33 65.82 68.49 | Loss 0.50383 0.77345 0.70441 | TEST P_min -0.440 P_max 0.457 P_norm 0.034469 P_Ratio 0.647
+==== Epoch58 AUC 91.00 65.75 68.48 | Loss 0.50065 0.77325 0.70588 | TEST P_min -0.436 P_max 0.442 P_norm 0.034816 P_Ratio 0.642
+==== Epoch59 AUC 91.17 65.75 68.41 | Loss 0.49704 0.77348 0.70751 | TEST P_min -0.499 P_max 0.456 P_norm 0.035836 P_Ratio 0.629
+==== Epoch60 AUC 91.17 65.71 68.37 | Loss 0.49312 0.77471 0.71026 | TEST P_min -0.408 P_max 0.437 P_norm 0.035916 P_Ratio 0.642
+==== Epoch61 AUC 91.50 65.57 68.44 | Loss 0.48868 0.78042 0.71405 | TEST P_min -0.419 P_max 0.444 P_norm 0.036151 P_Ratio 0.643
+==== Epoch62 AUC 91.50 65.75 68.34 | Loss 0.48569 0.77986 0.71582 | TEST P_min -0.525 P_max 0.503 P_norm 0.036806 P_Ratio 0.640
+==== Epoch63 AUC 91.50 65.75 68.46 | Loss 0.48275 0.77982 0.71706 | TEST P_min -0.440 P_max 0.428 P_norm 0.036899 P_Ratio 0.644
+==== Epoch64 AUC 91.67 65.71 68.27 | Loss 0.48003 0.78085 0.71931 | TEST P_min -0.465 P_max 0.440 P_norm 0.037589 P_Ratio 0.635
+==== Epoch65 AUC 91.50 65.53 68.20 | Loss 0.47726 0.77929 0.72107 | TEST P_min -0.447 P_max 0.451 P_norm 0.038061 P_Ratio 0.641
+==== Epoch66 AUC 91.83 65.60 68.21 | Loss 0.47434 0.77762 0.72153 | TEST P_min -0.459 P_max 0.464 P_norm 0.038548 P_Ratio 0.635
+==== Epoch67 AUC 91.83 65.79 68.25 | Loss 0.47236 0.77345 0.72121 | TEST P_min -0.448 P_max 0.469 P_norm 0.039324 P_Ratio 0.635
+==== Epoch68 AUC 92.50 65.86 68.14 | Loss 0.46811 0.77043 0.72169 | TEST P_min -0.386 P_max 0.411 P_norm 0.039481 P_Ratio 0.640
+==== Epoch69 AUC 92.33 65.90 68.06 | Loss 0.46705 0.76808 0.72245 | TEST P_min -0.520 P_max 0.533 P_norm 0.039921 P_Ratio 0.639
+==== Epoch70 AUC 92.33 65.68 68.04 | Loss 0.46405 0.76604 0.72256 | TEST P_min -0.426 P_max 0.444 P_norm 0.039682 P_Ratio 0.641
+==== Epoch71 AUC 92.33 65.90 67.88 | Loss 0.46060 0.76536 0.72449 | TEST P_min -0.437 P_max 0.489 P_norm 0.040503 P_Ratio 0.636
+==== Epoch72 AUC 92.50 65.75 67.88 | Loss 0.45898 0.76270 0.72472 | TEST P_min -0.523 P_max 0.473 P_norm 0.040553 P_Ratio 0.638
+==== Epoch73 AUC 92.50 65.53 67.66 | Loss 0.45779 0.76046 0.72617 | TEST P_min -0.458 P_max 0.456 P_norm 0.040516 P_Ratio 0.640
+==== Epoch74 AUC 92.50 65.75 67.50 | Loss 0.45561 0.75491 0.72486 | TEST P_min -0.412 P_max 0.409 P_norm 0.041017 P_Ratio 0.632
+==== Epoch75 AUC 92.50 65.90 67.48 | Loss 0.45383 0.75383 0.72533 | TEST P_min -0.427 P_max 0.438 P_norm 0.041101 P_Ratio 0.641
+==== Epoch76 AUC 92.50 65.75 67.15 | Loss 0.45163 0.75447 0.72866 | TEST P_min -0.417 P_max 0.443 P_norm 0.041889 P_Ratio 0.638
+==== Epoch77 AUC 92.67 65.60 67.31 | Loss 0.45081 0.75272 0.72737 | TEST P_min -0.561 P_max 0.565 P_norm 0.042119 P_Ratio 0.641
+==== Epoch78 AUC 92.67 65.79 67.03 | Loss 0.44934 0.74965 0.72782 | TEST P_min -0.533 P_max 0.567 P_norm 0.042642 P_Ratio 0.642
+==== Epoch79 AUC 93.00 65.82 67.05 | Loss 0.44739 0.75328 0.73043 | TEST P_min -0.485 P_max 0.480 P_norm 0.043216 P_Ratio 0.641
+==== Epoch80 AUC 92.83 65.60 66.91 | Loss 0.44542 0.75079 0.72993 | TEST P_min -0.463 P_max 0.512 P_norm 0.045231 P_Ratio 0.628
+==== Epoch81 AUC 92.83 65.60 67.01 | Loss 0.44498 0.74563 0.72821 | TEST P_min -0.464 P_max 0.439 P_norm 0.044683 P_Ratio 0.641
+==== Epoch82 AUC 92.67 65.57 67.08 | Loss 0.44386 0.74449 0.72861 | TEST P_min -0.479 P_max 0.471 P_norm 0.045910 P_Ratio 0.637
+==== Epoch83 AUC 92.83 65.53 66.98 | Loss 0.44277 0.74350 0.72953 | TEST P_min -0.545 P_max 0.528 P_norm 0.046210 P_Ratio 0.640
+==== Epoch84 AUC 92.83 65.49 66.96 | Loss 0.44141 0.74554 0.73061 | TEST P_min -0.554 P_max 0.584 P_norm 0.046148 P_Ratio 0.644
+==== Epoch85 AUC 93.00 65.57 66.94 | Loss 0.43966 0.74557 0.73213 | TEST P_min -0.472 P_max 0.465 P_norm 0.046994 P_Ratio 0.638
+==== Epoch86 AUC 93.17 65.46 66.84 | Loss 0.43794 0.74636 0.73320 | TEST P_min -0.583 P_max 0.553 P_norm 0.048199 P_Ratio 0.637
+==== Epoch87 AUC 93.00 65.60 66.91 | Loss 0.43730 0.74864 0.73562 | TEST P_min -0.592 P_max 0.585 P_norm 0.047841 P_Ratio 0.643
+==== Epoch88 AUC 93.00 65.38 66.81 | Loss 0.43669 0.74710 0.73610 | TEST P_min -0.519 P_max 0.534 P_norm 0.049710 P_Ratio 0.637
+==== Epoch89 AUC 93.00 65.64 66.82 | Loss 0.43566 0.74812 0.73735 | TEST P_min -0.560 P_max 0.551 P_norm 0.049888 P_Ratio 0.634
+==== Epoch90 AUC 93.00 65.46 66.81 | Loss 0.43562 0.74876 0.73810 | TEST P_min -0.619 P_max 0.602 P_norm 0.050846 P_Ratio 0.639
+==== Epoch91 AUC 92.83 65.71 66.91 | Loss 0.43521 0.74416 0.73562 | TEST P_min -0.469 P_max 0.447 P_norm 0.050939 P_Ratio 0.642
+==== Epoch92 AUC 93.17 65.68 66.74 | Loss 0.43429 0.74697 0.73774 | TEST P_min -0.671 P_max 0.641 P_norm 0.051480 P_Ratio 0.644
+==== Epoch93 AUC 93.00 65.42 66.79 | Loss 0.43331 0.74588 0.73815 | TEST P_min -0.496 P_max 0.529 P_norm 0.052976 P_Ratio 0.635
+==== Epoch94 AUC 93.00 65.46 66.65 | Loss 0.43182 0.74944 0.74137 | TEST P_min -0.552 P_max 0.495 P_norm 0.053509 P_Ratio 0.632
+==== Epoch95 AUC 93.00 65.57 66.72 | Loss 0.43107 0.75125 0.74274 | TEST P_min -0.480 P_max 0.461 P_norm 0.054415 P_Ratio 0.637
+==== Epoch96 AUC 93.17 65.71 66.67 | Loss 0.43073 0.74845 0.74281 | TEST P_min -0.689 P_max 0.691 P_norm 0.054872 P_Ratio 0.644
+==== Epoch97 AUC 93.33 65.49 66.75 | Loss 0.43077 0.74964 0.74315 | TEST P_min -0.546 P_max 0.506 P_norm 0.056162 P_Ratio 0.638
+==== Epoch98 AUC 93.17 65.24 66.82 | Loss 0.43163 0.74601 0.74040 | TEST P_min -0.534 P_max 0.522 P_norm 0.057591 P_Ratio 0.631
+==== Epoch99 AUC 93.17 65.31 66.63 | Loss 0.43117 0.74610 0.74238 | TEST P_min -0.526 P_max 0.540 P_norm 0.058212 P_Ratio 0.639
+==== Epoch100 AUC 93.17 65.42 66.67 | Loss 0.43229 0.74419 0.74044 | TEST P_min -0.676 P_max 0.676 P_norm 0.060745 P_Ratio 0.638
+====== BEST INFOS: EPOCH56 - TRAIN AUC 91.00 | VAL AUC 66.01 | TEST AUC 68.58
+
+
+========================================================================================================================
+total epoch:100 | head layer:3 | tasknet epoch:1 |tasknet lr:0.0005 | tasknet lr decay:down | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bace | 50-shots | contextpred.pth | seed:1 | runseed:4 | device:3
+TRAIN #-1: 30  #1: 20  #-1/#1: 1.5000
+VAL   #-1: 21  #1: 130  #-1/#1: 0.1615
+TEST  #-1: 71  #1: 81  #-1/#1: 0.8765
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 1.5000
+Dataset: 1513 | Train: 50  Val: 151  Test: 152
+Min Max Mean Median # nodes: 20 53 33.96 32.00 | 16 55 37.23 38.00 | 11 97 34.82 33.00
+First Train Data: Data(y=[1], fold=[1], x=[32, 2], id=[1], edge_index=[2, 72], edge_attr=[72, 2])
+==== Epoch01 AUC 65.00 43.66 53.35 | Loss 0.69328 0.68991 0.69253 | TEST P_min -0.089 P_max 0.090 P_norm 0.004593 P_Ratio 0.644
+==== Epoch20 AUC 81.67 63.59 68.63 | Loss 0.64692 0.79209 0.69717 | TEST P_min -0.304 P_max 0.340 P_norm 0.024388 P_Ratio 0.643
+==== Epoch21 AUC 81.83 63.81 68.61 | Loss 0.64393 0.79747 0.69782 | TEST P_min -0.322 P_max 0.301 P_norm 0.025132 P_Ratio 0.633
+==== Epoch22 AUC 83.17 63.81 68.77 | Loss 0.64085 0.80265 0.69848 | TEST P_min -0.347 P_max 0.432 P_norm 0.025405 P_Ratio 0.632
+==== Epoch23 AUC 83.67 63.88 69.00 | Loss 0.63763 0.80803 0.69902 | TEST P_min -0.581 P_max 0.505 P_norm 0.025551 P_Ratio 0.644
+==== Epoch24 AUC 83.83 63.99 68.93 | Loss 0.63449 0.81308 0.69981 | TEST P_min -0.357 P_max 0.334 P_norm 0.025794 P_Ratio 0.638
+==== Epoch25 AUC 84.33 63.92 68.98 | Loss 0.63107 0.81864 0.70063 | TEST P_min -0.414 P_max 0.384 P_norm 0.025935 P_Ratio 0.641
+==== Epoch26 AUC 84.67 64.21 69.00 | Loss 0.62777 0.82335 0.70149 | TEST P_min -0.341 P_max 0.343 P_norm 0.026620 P_Ratio 0.637
+==== Epoch27 AUC 85.67 64.32 69.05 | Loss 0.62426 0.82665 0.70205 | TEST P_min -0.374 P_max 0.464 P_norm 0.027217 P_Ratio 0.633
+==== Epoch28 AUC 85.83 64.65 69.00 | Loss 0.62130 0.83021 0.70285 | TEST P_min -0.374 P_max 0.415 P_norm 0.026559 P_Ratio 0.639
+==== Epoch29 AUC 86.50 64.43 69.19 | Loss 0.61768 0.83355 0.70354 | TEST P_min -0.394 P_max 0.412 P_norm 0.026053 P_Ratio 0.640
+==== Epoch30 AUC 86.67 64.51 69.15 | Loss 0.61436 0.83578 0.70408 | TEST P_min -0.437 P_max 0.413 P_norm 0.026197 P_Ratio 0.631
+==== Epoch31 AUC 87.00 64.84 69.26 | Loss 0.61122 0.83826 0.70465 | TEST P_min -0.406 P_max 0.395 P_norm 0.026313 P_Ratio 0.637
+==== Epoch32 AUC 87.00 64.80 69.27 | Loss 0.60789 0.83998 0.70505 | TEST P_min -0.382 P_max 0.358 P_norm 0.026363 P_Ratio 0.641
+==== Epoch33 AUC 87.33 64.80 69.22 | Loss 0.60400 0.84207 0.70553 | TEST P_min -0.406 P_max 0.411 P_norm 0.027044 P_Ratio 0.638
+==== Epoch34 AUC 87.50 64.73 69.21 | Loss 0.60013 0.84438 0.70636 | TEST P_min -0.394 P_max 0.394 P_norm 0.026977 P_Ratio 0.640
+==== Epoch35 AUC 87.67 64.95 69.14 | Loss 0.59729 0.84412 0.70666 | TEST P_min -0.362 P_max 0.375 P_norm 0.027166 P_Ratio 0.639
+==== Epoch36 AUC 88.17 64.80 69.12 | Loss 0.59407 0.84470 0.70721 | TEST P_min -0.422 P_max 0.396 P_norm 0.026933 P_Ratio 0.646
+==== Epoch37 AUC 88.00 64.58 69.05 | Loss 0.59095 0.84327 0.70700 | TEST P_min -0.361 P_max 0.353 P_norm 0.027639 P_Ratio 0.634
+==== Epoch38 AUC 88.00 64.73 69.07 | Loss 0.58742 0.83988 0.70612 | TEST P_min -0.376 P_max 0.357 P_norm 0.027492 P_Ratio 0.643
+==== Epoch39 AUC 88.33 64.43 69.19 | Loss 0.58411 0.83998 0.70665 | TEST P_min -0.395 P_max 0.377 P_norm 0.027305 P_Ratio 0.650
+==== Epoch40 AUC 88.67 64.95 69.07 | Loss 0.58130 0.83616 0.70580 | TEST P_min -0.414 P_max 0.480 P_norm 0.028902 P_Ratio 0.629
+==== Epoch41 AUC 89.00 64.91 69.15 | Loss 0.57769 0.83306 0.70489 | TEST P_min -0.427 P_max 0.396 P_norm 0.028449 P_Ratio 0.641
+==== Epoch42 AUC 89.67 64.98 69.05 | Loss 0.57457 0.82768 0.70351 | TEST P_min -0.382 P_max 0.356 P_norm 0.028162 P_Ratio 0.637
+==== Epoch43 AUC 89.83 65.20 69.00 | Loss 0.57224 0.82315 0.70228 | TEST P_min -0.429 P_max 0.402 P_norm 0.028742 P_Ratio 0.639
+==== Epoch44 AUC 90.17 65.24 68.86 | Loss 0.56906 0.81898 0.70118 | TEST P_min -0.382 P_max 0.412 P_norm 0.028970 P_Ratio 0.640
+==== Epoch45 AUC 90.33 65.16 68.79 | Loss 0.56587 0.81551 0.70048 | TEST P_min -0.372 P_max 0.365 P_norm 0.029729 P_Ratio 0.640
+==== Epoch46 AUC 90.83 65.31 68.87 | Loss 0.56302 0.81180 0.69965 | TEST P_min -0.405 P_max 0.486 P_norm 0.030280 P_Ratio 0.639
+==== Epoch47 AUC 90.83 65.24 68.75 | Loss 0.55959 0.80735 0.69896 | TEST P_min -0.432 P_max 0.431 P_norm 0.030800 P_Ratio 0.639
+==== Epoch48 AUC 91.33 64.95 68.61 | Loss 0.55624 0.80305 0.69830 | TEST P_min -0.417 P_max 0.406 P_norm 0.031109 P_Ratio 0.642
+==== Epoch49 AUC 91.50 65.20 68.61 | Loss 0.55356 0.80003 0.69756 | TEST P_min -0.389 P_max 0.442 P_norm 0.032249 P_Ratio 0.629
+==== Epoch50 AUC 91.50 65.02 68.63 | Loss 0.55022 0.79767 0.69729 | TEST P_min -0.440 P_max 0.425 P_norm 0.032463 P_Ratio 0.633
+==== Epoch51 AUC 91.50 65.13 68.63 | Loss 0.54865 0.79324 0.69594 | TEST P_min -0.458 P_max 0.499 P_norm 0.032292 P_Ratio 0.642
+==== Epoch52 AUC 91.17 65.16 68.61 | Loss 0.54499 0.79046 0.69541 | TEST P_min -0.422 P_max 0.466 P_norm 0.032177 P_Ratio 0.645
+==== Epoch53 AUC 91.17 65.31 68.65 | Loss 0.54235 0.78874 0.69574 | TEST P_min -0.501 P_max 0.439 P_norm 0.032780 P_Ratio 0.636
+==== Epoch54 AUC 91.00 65.16 68.58 | Loss 0.53957 0.78484 0.69526 | TEST P_min -0.413 P_max 0.425 P_norm 0.032729 P_Ratio 0.640
+==== Epoch55 AUC 91.50 65.02 68.61 | Loss 0.53577 0.78329 0.69489 | TEST P_min -0.398 P_max 0.429 P_norm 0.033015 P_Ratio 0.636
+==== Epoch56 AUC 91.50 65.09 68.70 | Loss 0.53301 0.77981 0.69461 | TEST P_min -0.412 P_max 0.426 P_norm 0.033016 P_Ratio 0.636
+==== Epoch57 AUC 91.50 64.95 68.67 | Loss 0.53030 0.77712 0.69442 | TEST P_min -0.457 P_max 0.432 P_norm 0.033372 P_Ratio 0.640
+==== Epoch58 AUC 91.50 64.84 68.72 | Loss 0.52717 0.77585 0.69475 | TEST P_min -0.515 P_max 0.492 P_norm 0.033447 P_Ratio 0.643
+==== Epoch59 AUC 91.50 65.09 68.61 | Loss 0.52426 0.77356 0.69517 | TEST P_min -0.474 P_max 0.502 P_norm 0.033726 P_Ratio 0.642
+==== Epoch60 AUC 91.33 64.95 68.61 | Loss 0.52147 0.77333 0.69604 | TEST P_min -0.523 P_max 0.473 P_norm 0.034882 P_Ratio 0.638
+==== Epoch61 AUC 91.50 64.91 68.49 | Loss 0.51792 0.77243 0.69667 | TEST P_min -0.563 P_max 0.545 P_norm 0.035110 P_Ratio 0.643
+==== Epoch62 AUC 91.50 65.09 68.48 | Loss 0.51534 0.76910 0.69692 | TEST P_min -0.399 P_max 0.422 P_norm 0.035732 P_Ratio 0.634
+==== Epoch63 AUC 92.17 64.87 68.39 | Loss 0.51227 0.76692 0.69695 | TEST P_min -0.564 P_max 0.556 P_norm 0.035860 P_Ratio 0.641
+==== Epoch64 AUC 92.17 64.98 68.37 | Loss 0.50947 0.76372 0.69678 | TEST P_min -0.437 P_max 0.448 P_norm 0.036174 P_Ratio 0.636
+==== Epoch65 AUC 92.33 65.05 68.27 | Loss 0.50603 0.76592 0.69919 | TEST P_min -0.433 P_max 0.407 P_norm 0.035787 P_Ratio 0.641
+==== Epoch66 AUC 92.33 64.62 68.23 | Loss 0.50345 0.76508 0.70016 | TEST P_min -0.571 P_max 0.609 P_norm 0.036335 P_Ratio 0.641
+==== Epoch67 AUC 92.33 64.65 68.09 | Loss 0.50068 0.76421 0.70083 | TEST P_min -0.461 P_max 0.446 P_norm 0.037106 P_Ratio 0.633
+==== Epoch68 AUC 92.33 64.76 67.88 | Loss 0.49829 0.76138 0.70171 | TEST P_min -0.438 P_max 0.520 P_norm 0.037111 P_Ratio 0.643
+==== Epoch69 AUC 92.17 64.69 67.81 | Loss 0.49563 0.76281 0.70299 | TEST P_min -0.553 P_max 0.504 P_norm 0.037514 P_Ratio 0.637
+==== Epoch70 AUC 92.00 64.58 67.88 | Loss 0.49329 0.76371 0.70435 | TEST P_min -0.426 P_max 0.394 P_norm 0.037507 P_Ratio 0.646
+==== Epoch71 AUC 92.33 64.69 67.76 | Loss 0.48994 0.76639 0.70706 | TEST P_min -0.484 P_max 0.482 P_norm 0.038696 P_Ratio 0.636
+==== Epoch72 AUC 92.17 64.47 67.76 | Loss 0.48768 0.76851 0.70873 | TEST P_min -0.646 P_max 0.625 P_norm 0.041008 P_Ratio 0.633
+==== Epoch73 AUC 92.33 64.80 67.80 | Loss 0.48484 0.76721 0.70979 | TEST P_min -0.426 P_max 0.421 P_norm 0.041664 P_Ratio 0.640
+==== Epoch74 AUC 92.33 64.54 67.66 | Loss 0.48289 0.76595 0.71055 | TEST P_min -0.482 P_max 0.476 P_norm 0.042427 P_Ratio 0.644
+==== Epoch75 AUC 92.33 64.51 67.66 | Loss 0.48141 0.76422 0.71110 | TEST P_min -0.525 P_max 0.537 P_norm 0.043492 P_Ratio 0.640
+==== Epoch76 AUC 92.17 64.25 67.83 | Loss 0.47946 0.76221 0.71063 | TEST P_min -0.576 P_max 0.575 P_norm 0.044524 P_Ratio 0.636
+==== Epoch77 AUC 92.17 64.51 67.57 | Loss 0.47767 0.76258 0.71348 | TEST P_min -0.517 P_max 0.484 P_norm 0.044820 P_Ratio 0.633
+==== Epoch78 AUC 92.33 64.51 67.48 | Loss 0.47459 0.76212 0.71440 | TEST P_min -0.562 P_max 0.555 P_norm 0.044039 P_Ratio 0.644
+==== Epoch79 AUC 92.17 64.43 67.50 | Loss 0.47446 0.75990 0.71452 | TEST P_min -0.478 P_max 0.495 P_norm 0.045341 P_Ratio 0.630
+==== Epoch80 AUC 92.17 64.76 67.47 | Loss 0.47213 0.75898 0.71510 | TEST P_min -0.684 P_max 0.619 P_norm 0.046148 P_Ratio 0.635
+==== Epoch81 AUC 92.33 65.16 67.43 | Loss 0.47100 0.75474 0.71447 | TEST P_min -0.486 P_max 0.483 P_norm 0.046942 P_Ratio 0.633
+==== Epoch82 AUC 92.50 65.02 67.45 | Loss 0.46805 0.75776 0.71700 | TEST P_min -0.471 P_max 0.461 P_norm 0.046272 P_Ratio 0.640
+==== Epoch83 AUC 92.33 64.80 67.36 | Loss 0.46661 0.75659 0.71819 | TEST P_min -0.491 P_max 0.493 P_norm 0.046833 P_Ratio 0.640
+==== Epoch84 AUC 92.33 64.65 67.34 | Loss 0.46541 0.75559 0.71897 | TEST P_min -0.455 P_max 0.486 P_norm 0.047362 P_Ratio 0.641
+==== Epoch85 AUC 92.50 64.76 67.26 | Loss 0.46468 0.75262 0.71859 | TEST P_min -0.558 P_max 0.571 P_norm 0.047936 P_Ratio 0.633
+==== Epoch86 AUC 92.50 64.69 67.22 | Loss 0.46268 0.75115 0.71901 | TEST P_min -0.438 P_max 0.466 P_norm 0.048223 P_Ratio 0.637
+==== Epoch87 AUC 92.50 64.98 67.24 | Loss 0.46186 0.75013 0.71929 | TEST P_min -0.585 P_max 0.586 P_norm 0.047538 P_Ratio 0.639
+==== Epoch88 AUC 92.50 65.16 67.34 | Loss 0.46168 0.75062 0.71995 | TEST P_min -0.551 P_max 0.566 P_norm 0.048792 P_Ratio 0.642
+==== Epoch89 AUC 92.50 64.84 67.45 | Loss 0.45967 0.74862 0.71934 | TEST P_min -0.489 P_max 0.487 P_norm 0.050061 P_Ratio 0.641
+==== Epoch90 AUC 92.33 64.73 67.26 | Loss 0.46003 0.74822 0.72026 | TEST P_min -0.525 P_max 0.489 P_norm 0.050744 P_Ratio 0.632
+==== Epoch91 AUC 92.50 64.47 67.14 | Loss 0.45915 0.74693 0.72024 | TEST P_min -0.558 P_max 0.555 P_norm 0.050036 P_Ratio 0.645
+==== Epoch92 AUC 92.33 64.69 67.14 | Loss 0.45904 0.74485 0.71989 | TEST P_min -0.592 P_max 0.592 P_norm 0.051236 P_Ratio 0.636
+==== Epoch93 AUC 92.50 64.29 67.08 | Loss 0.45870 0.74517 0.72022 | TEST P_min -0.552 P_max 0.571 P_norm 0.051502 P_Ratio 0.636
+==== Epoch94 AUC 92.33 64.58 67.21 | Loss 0.45878 0.74359 0.71892 | TEST P_min -0.591 P_max 0.592 P_norm 0.052008 P_Ratio 0.634
+==== Epoch95 AUC 92.33 64.51 67.10 | Loss 0.45801 0.74258 0.71931 | TEST P_min -0.538 P_max 0.530 P_norm 0.053911 P_Ratio 0.635
+==== Epoch96 AUC 92.33 64.40 67.08 | Loss 0.45780 0.74363 0.71976 | TEST P_min -0.491 P_max 0.492 P_norm 0.055573 P_Ratio 0.639
+==== Epoch97 AUC 92.50 64.47 67.12 | Loss 0.45764 0.74509 0.72003 | TEST P_min -0.572 P_max 0.571 P_norm 0.056762 P_Ratio 0.642
+==== Epoch98 AUC 92.33 64.29 67.10 | Loss 0.45739 0.74581 0.72058 | TEST P_min -0.543 P_max 0.511 P_norm 0.057909 P_Ratio 0.638
+==== Epoch99 AUC 92.17 64.40 67.10 | Loss 0.45670 0.74594 0.72080 | TEST P_min -0.714 P_max 0.657 P_norm 0.059666 P_Ratio 0.630
+==== Epoch100 AUC 92.17 64.29 67.00 | Loss 0.45639 0.75164 0.72409 | TEST P_min -0.518 P_max 0.507 P_norm 0.060355 P_Ratio 0.638
+====== BEST INFOS: EPOCH46 - TRAIN AUC 90.83 | VAL AUC 65.31 | TEST AUC 68.87
+
+
+========================================================================================================================
+total epoch:100 | head layer:3 | tasknet epoch:1 |tasknet lr:0.0005 | tasknet lr decay:down | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bace | 50-shots | contextpred.pth | seed:1 | runseed:5 | device:3
+TRAIN #-1: 30  #1: 20  #-1/#1: 1.5000
+VAL   #-1: 21  #1: 130  #-1/#1: 0.1615
+TEST  #-1: 71  #1: 81  #-1/#1: 0.8765
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 1.5000
+Dataset: 1513 | Train: 50  Val: 151  Test: 152
+Min Max Mean Median # nodes: 20 53 33.96 32.00 | 16 55 37.23 38.00 | 11 97 34.82 33.00
+First Train Data: Data(y=[1], fold=[1], x=[32, 2], id=[1], edge_index=[2, 72], edge_attr=[72, 2])
+==== Epoch01 AUC 51.00 52.12 50.84 | Loss 0.68908 0.70961 0.69486 | TEST P_min -0.121 P_max 0.101 P_norm 0.004625 P_Ratio 0.638
+==== Epoch20 AUC 86.83 64.98 70.18 | Loss 0.63837 0.81494 0.70322 | TEST P_min -0.503 P_max 0.492 P_norm 0.027330 P_Ratio 0.639
+==== Epoch21 AUC 86.83 65.02 70.02 | Loss 0.63503 0.82052 0.70413 | TEST P_min -0.420 P_max 0.404 P_norm 0.028177 P_Ratio 0.635
+==== Epoch22 AUC 87.17 65.09 69.97 | Loss 0.63182 0.82537 0.70494 | TEST P_min -0.399 P_max 0.400 P_norm 0.029603 P_Ratio 0.632
+==== Epoch23 AUC 87.33 65.20 70.07 | Loss 0.62843 0.83020 0.70582 | TEST P_min -0.433 P_max 0.479 P_norm 0.030050 P_Ratio 0.634
+==== Epoch24 AUC 88.00 64.98 70.06 | Loss 0.62516 0.83364 0.70643 | TEST P_min -0.400 P_max 0.408 P_norm 0.030339 P_Ratio 0.639
+==== Epoch25 AUC 88.00 65.20 70.02 | Loss 0.62171 0.83737 0.70727 | TEST P_min -0.438 P_max 0.446 P_norm 0.030359 P_Ratio 0.645
+==== Epoch26 AUC 87.83 65.24 70.11 | Loss 0.61817 0.83968 0.70756 | TEST P_min -0.394 P_max 0.463 P_norm 0.030884 P_Ratio 0.638
+==== Epoch27 AUC 88.00 65.27 69.90 | Loss 0.61490 0.84143 0.70815 | TEST P_min -0.361 P_max 0.373 P_norm 0.031369 P_Ratio 0.640
+==== Epoch28 AUC 88.00 65.20 69.74 | Loss 0.61147 0.84257 0.70826 | TEST P_min -0.387 P_max 0.393 P_norm 0.032359 P_Ratio 0.638
+==== Epoch29 AUC 88.00 65.57 69.67 | Loss 0.60781 0.84297 0.70848 | TEST P_min -0.431 P_max 0.424 P_norm 0.031820 P_Ratio 0.637
+==== Epoch30 AUC 88.17 65.60 69.88 | Loss 0.60434 0.84294 0.70821 | TEST P_min -0.438 P_max 0.435 P_norm 0.031403 P_Ratio 0.636
+==== Epoch31 AUC 88.17 65.60 69.73 | Loss 0.60105 0.84363 0.70844 | TEST P_min -0.448 P_max 0.455 P_norm 0.031061 P_Ratio 0.639
+==== Epoch32 AUC 89.17 65.86 69.66 | Loss 0.59731 0.84354 0.70881 | TEST P_min -0.417 P_max 0.455 P_norm 0.031330 P_Ratio 0.632
+==== Epoch33 AUC 88.83 66.08 69.61 | Loss 0.59407 0.84283 0.70880 | TEST P_min -0.380 P_max 0.376 P_norm 0.030955 P_Ratio 0.638
+==== Epoch34 AUC 88.67 66.26 69.59 | Loss 0.59071 0.84035 0.70804 | TEST P_min -0.431 P_max 0.429 P_norm 0.031173 P_Ratio 0.634
+==== Epoch35 AUC 88.67 66.26 69.69 | Loss 0.58712 0.83909 0.70755 | TEST P_min -0.490 P_max 0.446 P_norm 0.031958 P_Ratio 0.629
+==== Epoch36 AUC 88.67 65.90 69.73 | Loss 0.58367 0.83740 0.70702 | TEST P_min -0.384 P_max 0.378 P_norm 0.031955 P_Ratio 0.625
+==== Epoch37 AUC 89.00 65.82 69.55 | Loss 0.57984 0.83543 0.70699 | TEST P_min -0.429 P_max 0.451 P_norm 0.031193 P_Ratio 0.639
+==== Epoch38 AUC 89.33 65.79 69.71 | Loss 0.57662 0.83306 0.70634 | TEST P_min -0.404 P_max 0.418 P_norm 0.030924 P_Ratio 0.645
+==== Epoch39 AUC 89.33 65.71 69.55 | Loss 0.57330 0.83123 0.70625 | TEST P_min -0.460 P_max 0.450 P_norm 0.031553 P_Ratio 0.637
+==== Epoch40 AUC 89.17 66.04 69.45 | Loss 0.56963 0.82872 0.70579 | TEST P_min -0.408 P_max 0.395 P_norm 0.032144 P_Ratio 0.636
+==== Epoch41 AUC 89.50 66.15 69.33 | Loss 0.56593 0.82514 0.70493 | TEST P_min -0.356 P_max 0.363 P_norm 0.032806 P_Ratio 0.635
+==== Epoch42 AUC 89.50 66.30 69.38 | Loss 0.56255 0.82233 0.70414 | TEST P_min -0.441 P_max 0.443 P_norm 0.032587 P_Ratio 0.640
+==== Epoch43 AUC 89.33 66.26 69.24 | Loss 0.55914 0.81886 0.70390 | TEST P_min -0.502 P_max 0.435 P_norm 0.032734 P_Ratio 0.643
+==== Epoch44 AUC 89.50 66.23 69.21 | Loss 0.55593 0.81465 0.70269 | TEST P_min -0.454 P_max 0.439 P_norm 0.032666 P_Ratio 0.644
+==== Epoch45 AUC 89.67 66.30 69.24 | Loss 0.55222 0.81204 0.70169 | TEST P_min -0.506 P_max 0.486 P_norm 0.033238 P_Ratio 0.635
+==== Epoch46 AUC 89.67 66.30 69.27 | Loss 0.54857 0.80780 0.70072 | TEST P_min -0.536 P_max 0.507 P_norm 0.033022 P_Ratio 0.640
+==== Epoch47 AUC 89.83 66.04 69.41 | Loss 0.54494 0.80321 0.69944 | TEST P_min -0.429 P_max 0.405 P_norm 0.033586 P_Ratio 0.638
+==== Epoch48 AUC 90.00 66.26 69.26 | Loss 0.54102 0.80030 0.69930 | TEST P_min -0.435 P_max 0.438 P_norm 0.034061 P_Ratio 0.629
+==== Epoch49 AUC 90.17 66.19 69.22 | Loss 0.53759 0.79719 0.69856 | TEST P_min -0.424 P_max 0.421 P_norm 0.033847 P_Ratio 0.636
+==== Epoch50 AUC 90.17 66.15 69.08 | Loss 0.53403 0.79504 0.69852 | TEST P_min -0.416 P_max 0.421 P_norm 0.033977 P_Ratio 0.640
+==== Epoch51 AUC 90.33 66.08 69.05 | Loss 0.53022 0.79552 0.69962 | TEST P_min -0.429 P_max 0.395 P_norm 0.035053 P_Ratio 0.627
+==== Epoch52 AUC 90.33 66.01 69.14 | Loss 0.52643 0.79350 0.69915 | TEST P_min -0.519 P_max 0.455 P_norm 0.035179 P_Ratio 0.630
+==== Epoch53 AUC 90.50 65.86 68.84 | Loss 0.52289 0.79194 0.69959 | TEST P_min -0.452 P_max 0.505 P_norm 0.035691 P_Ratio 0.630
+==== Epoch54 AUC 90.50 65.82 68.86 | Loss 0.51924 0.79218 0.70108 | TEST P_min -0.417 P_max 0.389 P_norm 0.035749 P_Ratio 0.635
+==== Epoch55 AUC 90.67 65.64 68.86 | Loss 0.51532 0.79292 0.70201 | TEST P_min -0.467 P_max 0.461 P_norm 0.034796 P_Ratio 0.650
+==== Epoch56 AUC 90.50 65.86 68.79 | Loss 0.51209 0.79293 0.70370 | TEST P_min -0.414 P_max 0.388 P_norm 0.036086 P_Ratio 0.636
+==== Epoch57 AUC 90.83 65.46 68.65 | Loss 0.50776 0.79301 0.70457 | TEST P_min -0.428 P_max 0.416 P_norm 0.036304 P_Ratio 0.645
+==== Epoch58 AUC 90.83 65.57 68.81 | Loss 0.50457 0.79124 0.70483 | TEST P_min -0.439 P_max 0.423 P_norm 0.037355 P_Ratio 0.638
+==== Epoch59 AUC 90.83 65.42 68.41 | Loss 0.50064 0.79065 0.70630 | TEST P_min -0.444 P_max 0.440 P_norm 0.038395 P_Ratio 0.636
+==== Epoch60 AUC 90.83 65.57 68.44 | Loss 0.49886 0.78805 0.70628 | TEST P_min -0.447 P_max 0.445 P_norm 0.038979 P_Ratio 0.634
+==== Epoch61 AUC 91.33 65.53 68.28 | Loss 0.49423 0.78698 0.70762 | TEST P_min -0.507 P_max 0.534 P_norm 0.039018 P_Ratio 0.638
+==== Epoch62 AUC 91.67 65.38 68.14 | Loss 0.49048 0.78463 0.70816 | TEST P_min -0.549 P_max 0.500 P_norm 0.039558 P_Ratio 0.638
+==== Epoch63 AUC 91.33 65.49 68.08 | Loss 0.48858 0.78201 0.70912 | TEST P_min -0.564 P_max 0.510 P_norm 0.039147 P_Ratio 0.635
+==== Epoch64 AUC 91.67 65.38 67.92 | Loss 0.48557 0.77965 0.70932 | TEST P_min -0.464 P_max 0.498 P_norm 0.039592 P_Ratio 0.631
+==== Epoch65 AUC 92.00 65.31 67.71 | Loss 0.48105 0.77666 0.71008 | TEST P_min -0.545 P_max 0.535 P_norm 0.039684 P_Ratio 0.633
+==== Epoch66 AUC 91.83 65.16 67.54 | Loss 0.47900 0.77610 0.71135 | TEST P_min -0.470 P_max 0.481 P_norm 0.039916 P_Ratio 0.639
+==== Epoch67 AUC 92.17 64.98 67.26 | Loss 0.47582 0.77579 0.71366 | TEST P_min -0.472 P_max 0.470 P_norm 0.040676 P_Ratio 0.634
+==== Epoch68 AUC 92.17 65.02 67.29 | Loss 0.47299 0.77280 0.71365 | TEST P_min -0.491 P_max 0.485 P_norm 0.041257 P_Ratio 0.636
+==== Epoch69 AUC 92.17 65.16 67.34 | Loss 0.47011 0.77015 0.71447 | TEST P_min -0.500 P_max 0.510 P_norm 0.041308 P_Ratio 0.643
+==== Epoch70 AUC 92.00 64.91 67.22 | Loss 0.46768 0.76791 0.71518 | TEST P_min -0.465 P_max 0.460 P_norm 0.041726 P_Ratio 0.637
+==== Epoch71 AUC 92.17 64.80 67.15 | Loss 0.46529 0.76489 0.71579 | TEST P_min -0.467 P_max 0.513 P_norm 0.042531 P_Ratio 0.631
+==== Epoch72 AUC 92.00 64.95 67.08 | Loss 0.46381 0.76134 0.71551 | TEST P_min -0.498 P_max 0.495 P_norm 0.042649 P_Ratio 0.644
+==== Epoch73 AUC 92.17 64.73 67.07 | Loss 0.46067 0.75909 0.71571 | TEST P_min -0.529 P_max 0.552 P_norm 0.043238 P_Ratio 0.638
+==== Epoch74 AUC 92.17 64.95 67.14 | Loss 0.45815 0.76131 0.71819 | TEST P_min -0.464 P_max 0.457 P_norm 0.043606 P_Ratio 0.640
+==== Epoch75 AUC 92.17 64.76 67.10 | Loss 0.45675 0.75935 0.71776 | TEST P_min -0.525 P_max 0.547 P_norm 0.044565 P_Ratio 0.638
+==== Epoch76 AUC 92.50 64.62 66.94 | Loss 0.45510 0.75699 0.71860 | TEST P_min -0.611 P_max 0.611 P_norm 0.045824 P_Ratio 0.631
+==== Epoch77 AUC 92.67 64.47 66.94 | Loss 0.45137 0.75579 0.71931 | TEST P_min -0.548 P_max 0.543 P_norm 0.044820 P_Ratio 0.643
+==== Epoch78 AUC 92.50 64.54 66.98 | Loss 0.45163 0.75201 0.71824 | TEST P_min -0.571 P_max 0.553 P_norm 0.046175 P_Ratio 0.633
+==== Epoch79 AUC 92.50 64.29 66.88 | Loss 0.44963 0.75235 0.72007 | TEST P_min -0.435 P_max 0.438 P_norm 0.045320 P_Ratio 0.646
+==== Epoch80 AUC 92.83 64.47 66.86 | Loss 0.44690 0.75012 0.72002 | TEST P_min -0.490 P_max 0.522 P_norm 0.047160 P_Ratio 0.634
+==== Epoch81 AUC 93.17 64.29 66.65 | Loss 0.44443 0.75226 0.72298 | TEST P_min -0.575 P_max 0.580 P_norm 0.046627 P_Ratio 0.638
+==== Epoch82 AUC 92.67 64.29 66.60 | Loss 0.44354 0.75105 0.72388 | TEST P_min -0.578 P_max 0.559 P_norm 0.047085 P_Ratio 0.641
+==== Epoch83 AUC 93.17 64.18 66.65 | Loss 0.44233 0.74549 0.72173 | TEST P_min -0.507 P_max 0.519 P_norm 0.047402 P_Ratio 0.637
+==== Epoch84 AUC 93.17 64.32 66.65 | Loss 0.44072 0.74690 0.72353 | TEST P_min -0.592 P_max 0.585 P_norm 0.047716 P_Ratio 0.640
+==== Epoch85 AUC 92.83 64.40 66.63 | Loss 0.44085 0.74324 0.72224 | TEST P_min -0.588 P_max 0.541 P_norm 0.048731 P_Ratio 0.638
+==== Epoch86 AUC 93.17 64.54 66.51 | Loss 0.43889 0.74549 0.72454 | TEST P_min -0.482 P_max 0.488 P_norm 0.049001 P_Ratio 0.635
+==== Epoch87 AUC 93.67 64.54 66.58 | Loss 0.43592 0.74582 0.72541 | TEST P_min -0.558 P_max 0.558 P_norm 0.049034 P_Ratio 0.637
+==== Epoch88 AUC 93.33 64.43 66.56 | Loss 0.43583 0.74885 0.72864 | TEST P_min -0.478 P_max 0.480 P_norm 0.049225 P_Ratio 0.632
+==== Epoch89 AUC 93.17 64.51 66.32 | Loss 0.43457 0.75249 0.73206 | TEST P_min -0.487 P_max 0.490 P_norm 0.048715 P_Ratio 0.640
+==== Epoch90 AUC 93.00 64.36 66.53 | Loss 0.43422 0.75194 0.73081 | TEST P_min -0.523 P_max 0.545 P_norm 0.049225 P_Ratio 0.636
+==== Epoch91 AUC 93.67 64.36 66.41 | Loss 0.43189 0.74932 0.73100 | TEST P_min -0.586 P_max 0.591 P_norm 0.051080 P_Ratio 0.628
+==== Epoch92 AUC 93.00 64.43 66.63 | Loss 0.43334 0.74422 0.72799 | TEST P_min -0.580 P_max 0.550 P_norm 0.050577 P_Ratio 0.644
+==== Epoch93 AUC 93.17 64.32 66.67 | Loss 0.43297 0.74245 0.72879 | TEST P_min -0.489 P_max 0.488 P_norm 0.051203 P_Ratio 0.644
+==== Epoch94 AUC 93.33 64.47 66.60 | Loss 0.43203 0.74501 0.72994 | TEST P_min -0.457 P_max 0.440 P_norm 0.051606 P_Ratio 0.632
+==== Epoch95 AUC 93.00 64.21 66.60 | Loss 0.43126 0.74718 0.73163 | TEST P_min -0.494 P_max 0.496 P_norm 0.052319 P_Ratio 0.635
+==== Epoch96 AUC 93.17 64.25 66.58 | Loss 0.43074 0.74767 0.73211 | TEST P_min -0.487 P_max 0.513 P_norm 0.053374 P_Ratio 0.627
+==== Epoch97 AUC 93.17 64.32 66.53 | Loss 0.43092 0.74667 0.73200 | TEST P_min -0.591 P_max 0.594 P_norm 0.053069 P_Ratio 0.641
+==== Epoch98 AUC 93.00 64.51 66.54 | Loss 0.43149 0.74566 0.73177 | TEST P_min -0.485 P_max 0.488 P_norm 0.054281 P_Ratio 0.643
+==== Epoch99 AUC 93.17 64.65 66.53 | Loss 0.43083 0.74221 0.73050 | TEST P_min -0.590 P_max 0.595 P_norm 0.054245 P_Ratio 0.635
+==== Epoch100 AUC 92.83 64.40 66.56 | Loss 0.43068 0.74346 0.73135 | TEST P_min -0.556 P_max 0.554 P_norm 0.054807 P_Ratio 0.640
+====== BEST INFOS: EPOCH45 - TRAIN AUC 89.67 | VAL AUC 66.30 | TEST AUC 69.24
+
+
+================ AVG_AUC 69.65 ================

@@ -2,13 +2,8 @@ import datetime
 
 import torch
 from torch_geometric.data import Batch
-from torch_geometric.nn import global_add_pool
 
        
-def get_time():
-    return (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('%H:%M:%S')
-
-
 def logargs(args, width=120):
     length = 1
     L=[]

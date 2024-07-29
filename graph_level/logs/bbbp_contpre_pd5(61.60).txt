@@ -1,0 +1,243 @@
+nohup: ignoring input
+PID[79842]
+========================================================================================================================
+total epoch:50 | head layer:3 | tasknet epoch:3 |tasknet lr:0.001 | tasknet lr decay:static | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bbbp | 50-shots | contextpred.pth | seed:0 | runseed:1 | device:0
+TRAIN #-1: 13  #1: 37  #-1/#1: 0.3514
+VAL   #-1: 123  #1: 81  #-1/#1: 1.5185
+TEST  #-1: 96  #1: 108  #-1/#1: 0.8889
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 0.3514
+Dataset: 2039 | Train: 50  Val: 204  Test: 204
+Min Max Mean Median # nodes: 5 34 21.02 21.00 | 9 132 33.44 29.00 | 6 101 27.51 24.00
+First Train Data: Data(id=[1], edge_index=[2, 62], edge_attr=[62, 2], y=[1], x=[28, 2])
+==== Epoch01 AUC 63.41 51.39 54.63 | Loss 0.65209 0.71371 0.69050 | TEST P_min -0.078 P_max 0.067 P_norm 0.003311 P_Ratio 0.633
+==== Epoch20 AUC 100.00 79.90 60.50 | Loss 0.04949 1.11203 1.73354 | TEST P_min -0.201 P_max 0.220 P_norm 0.014551 P_Ratio 0.639
+==== Epoch21 AUC 100.00 80.52 60.38 | Loss 0.03791 1.17452 1.89619 | TEST P_min -0.198 P_max 0.222 P_norm 0.014933 P_Ratio 0.631
+==== Epoch22 AUC 100.00 81.38 60.34 | Loss 0.03070 1.25489 2.07551 | TEST P_min -0.221 P_max 0.288 P_norm 0.014865 P_Ratio 0.648
+==== Epoch23 AUC 100.00 82.18 60.35 | Loss 0.02639 1.33387 2.24795 | TEST P_min -0.258 P_max 0.235 P_norm 0.014905 P_Ratio 0.647
+==== Epoch24 AUC 100.00 81.96 60.43 | Loss 0.02198 1.37478 2.29900 | TEST P_min -0.233 P_max 0.265 P_norm 0.015287 P_Ratio 0.635
+==== Epoch25 AUC 100.00 80.70 60.57 | Loss 0.02081 1.37523 2.19954 | TEST P_min -0.214 P_max 0.238 P_norm 0.015504 P_Ratio 0.642
+==== Epoch26 AUC 100.00 79.37 60.75 | Loss 0.02326 1.40727 2.16305 | TEST P_min -0.179 P_max 0.242 P_norm 0.015411 P_Ratio 0.641
+==== Epoch27 AUC 100.00 80.04 60.57 | Loss 0.01583 1.50213 2.34394 | TEST P_min -0.262 P_max 0.275 P_norm 0.015253 P_Ratio 0.636
+==== Epoch28 AUC 100.00 80.60 60.17 | Loss 0.01118 1.60335 2.53477 | TEST P_min -0.196 P_max 0.200 P_norm 0.015394 P_Ratio 0.642
+==== Epoch29 AUC 100.00 80.97 60.37 | Loss 0.00973 1.66518 2.62472 | TEST P_min -0.215 P_max 0.213 P_norm 0.015208 P_Ratio 0.645
+==== Epoch30 AUC 100.00 80.08 60.39 | Loss 0.01168 1.65889 2.53635 | TEST P_min -0.265 P_max 0.278 P_norm 0.015253 P_Ratio 0.643
+==== Epoch31 AUC 100.00 79.95 60.57 | Loss 0.01402 1.62030 2.46723 | TEST P_min -0.270 P_max 0.223 P_norm 0.015328 P_Ratio 0.645
+==== Epoch32 AUC 100.00 80.54 60.98 | Loss 0.01068 1.62610 2.53991 | TEST P_min -0.235 P_max 0.214 P_norm 0.015657 P_Ratio 0.637
+==== Epoch33 AUC 100.00 81.64 61.07 | Loss 0.00587 1.70762 2.76265 | TEST P_min -0.225 P_max 0.236 P_norm 0.015654 P_Ratio 0.642
+==== Epoch34 AUC 100.00 82.09 60.82 | Loss 0.00446 1.73978 2.84981 | TEST P_min -0.291 P_max 0.268 P_norm 0.016004 P_Ratio 0.639
+==== Epoch35 AUC 100.00 82.44 60.84 | Loss 0.00362 1.70833 2.86302 | TEST P_min -0.237 P_max 0.224 P_norm 0.016370 P_Ratio 0.640
+==== Epoch36 AUC 100.00 81.42 60.51 | Loss 0.00353 1.60180 2.66024 | TEST P_min -0.228 P_max 0.254 P_norm 0.016509 P_Ratio 0.640
+==== Epoch37 AUC 100.00 80.49 60.16 | Loss 0.00412 1.53576 2.50727 | TEST P_min -0.229 P_max 0.231 P_norm 0.016327 P_Ratio 0.638
+==== Epoch38 AUC 100.00 80.30 60.07 | Loss 0.00421 1.54819 2.49592 | TEST P_min -0.221 P_max 0.227 P_norm 0.016576 P_Ratio 0.638
+==== Epoch39 AUC 100.00 80.59 60.08 | Loss 0.00379 1.57376 2.55532 | TEST P_min -0.233 P_max 0.241 P_norm 0.016836 P_Ratio 0.635
+==== Epoch40 AUC 100.00 81.65 60.19 | Loss 0.00288 1.60885 2.72351 | TEST P_min -0.286 P_max 0.298 P_norm 0.017000 P_Ratio 0.643
+==== Epoch41 AUC 100.00 82.85 60.21 | Loss 0.00274 1.64561 2.88212 | TEST P_min -0.275 P_max 0.253 P_norm 0.017199 P_Ratio 0.636
+==== Epoch42 AUC 100.00 82.90 60.19 | Loss 0.00320 1.64458 2.87327 | TEST P_min -0.251 P_max 0.236 P_norm 0.017139 P_Ratio 0.644
+==== Epoch43 AUC 100.00 82.24 60.31 | Loss 0.00391 1.63000 2.77919 | TEST P_min -0.243 P_max 0.225 P_norm 0.017719 P_Ratio 0.635
+==== Epoch44 AUC 100.00 81.70 60.46 | Loss 0.00433 1.62352 2.72971 | TEST P_min -0.271 P_max 0.241 P_norm 0.017492 P_Ratio 0.640
+==== Epoch45 AUC 100.00 80.62 60.42 | Loss 0.00527 1.59230 2.59941 | TEST P_min -0.258 P_max 0.243 P_norm 0.017337 P_Ratio 0.637
+==== Epoch46 AUC 100.00 80.57 60.56 | Loss 0.00473 1.60371 2.61190 | TEST P_min -0.283 P_max 0.259 P_norm 0.017062 P_Ratio 0.643
+==== Epoch47 AUC 100.00 81.48 60.90 | Loss 0.00297 1.64988 2.75604 | TEST P_min -0.241 P_max 0.237 P_norm 0.017353 P_Ratio 0.635
+==== Epoch48 AUC 100.00 81.93 61.05 | Loss 0.00259 1.64799 2.77560 | TEST P_min -0.302 P_max 0.332 P_norm 0.017213 P_Ratio 0.647
+==== Epoch49 AUC 100.00 81.64 61.22 | Loss 0.00274 1.67714 2.75431 | TEST P_min -0.246 P_max 0.295 P_norm 0.017626 P_Ratio 0.645
+==== Epoch50 AUC 100.00 81.45 61.16 | Loss 0.00279 1.72914 2.78199 | TEST P_min -0.253 P_max 0.264 P_norm 0.017709 P_Ratio 0.644
+====== BEST INFOS: EPOCH42 - TRAIN AUC 100.00 | VAL AUC 82.90 | TEST AUC 60.19
+
+
+========================================================================================================================
+total epoch:50 | head layer:3 | tasknet epoch:3 |tasknet lr:0.001 | tasknet lr decay:static | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bbbp | 50-shots | contextpred.pth | seed:0 | runseed:2 | device:0
+TRAIN #-1: 13  #1: 37  #-1/#1: 0.3514
+VAL   #-1: 123  #1: 81  #-1/#1: 1.5185
+TEST  #-1: 96  #1: 108  #-1/#1: 0.8889
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 0.3514
+Dataset: 2039 | Train: 50  Val: 204  Test: 204
+Min Max Mean Median # nodes: 5 34 21.02 21.00 | 9 132 33.44 29.00 | 6 101 27.51 24.00
+First Train Data: Data(id=[1], edge_index=[2, 62], edge_attr=[62, 2], y=[1], x=[28, 2])
+==== Epoch01 AUC 74.43 60.94 54.94 | Loss 0.64844 0.71500 0.69075 | TEST P_min -0.061 P_max 0.073 P_norm 0.003397 P_Ratio 0.639
+==== Epoch20 AUC 100.00 80.51 61.51 | Loss 0.03391 1.13456 1.85036 | TEST P_min -0.201 P_max 0.209 P_norm 0.015086 P_Ratio 0.640
+==== Epoch21 AUC 100.00 81.93 61.68 | Loss 0.02411 1.16476 1.99753 | TEST P_min -0.252 P_max 0.300 P_norm 0.015691 P_Ratio 0.636
+==== Epoch22 AUC 100.00 82.40 61.72 | Loss 0.01701 1.22915 2.14339 | TEST P_min -0.261 P_max 0.241 P_norm 0.016086 P_Ratio 0.637
+==== Epoch23 AUC 100.00 82.70 61.75 | Loss 0.01186 1.34150 2.34009 | TEST P_min -0.246 P_max 0.248 P_norm 0.016101 P_Ratio 0.639
+==== Epoch24 AUC 100.00 82.31 61.18 | Loss 0.00950 1.41516 2.44157 | TEST P_min -0.252 P_max 0.257 P_norm 0.016224 P_Ratio 0.634
+==== Epoch25 AUC 100.00 79.93 60.76 | Loss 0.00761 1.44575 2.35828 | TEST P_min -0.221 P_max 0.244 P_norm 0.015991 P_Ratio 0.640
+==== Epoch26 AUC 100.00 77.72 60.32 | Loss 0.00903 1.41608 2.20795 | TEST P_min -0.252 P_max 0.230 P_norm 0.015966 P_Ratio 0.643
+==== Epoch27 AUC 100.00 77.49 60.14 | Loss 0.01147 1.37774 2.14632 | TEST P_min -0.245 P_max 0.260 P_norm 0.016323 P_Ratio 0.642
+==== Epoch28 AUC 100.00 80.26 60.37 | Loss 0.00645 1.40749 2.39751 | TEST P_min -0.224 P_max 0.266 P_norm 0.016532 P_Ratio 0.650
+==== Epoch29 AUC 100.00 83.50 60.33 | Loss 0.00714 1.49361 2.76936 | TEST P_min -0.249 P_max 0.258 P_norm 0.016676 P_Ratio 0.633
+==== Epoch30 AUC 100.00 84.38 60.47 | Loss 0.00675 1.51741 2.88170 | TEST P_min -0.322 P_max 0.280 P_norm 0.016609 P_Ratio 0.649
+==== Epoch31 AUC 100.00 83.88 60.60 | Loss 0.00556 1.46663 2.74335 | TEST P_min -0.247 P_max 0.276 P_norm 0.016712 P_Ratio 0.639
+==== Epoch32 AUC 100.00 82.24 60.95 | Loss 0.00608 1.37696 2.46226 | TEST P_min -0.242 P_max 0.271 P_norm 0.016627 P_Ratio 0.643
+==== Epoch33 AUC 100.00 81.46 60.89 | Loss 0.00842 1.31813 2.31364 | TEST P_min -0.280 P_max 0.275 P_norm 0.016659 P_Ratio 0.641
+==== Epoch34 AUC 100.00 81.79 61.05 | Loss 0.00824 1.32681 2.32915 | TEST P_min -0.283 P_max 0.307 P_norm 0.016742 P_Ratio 0.636
+==== Epoch35 AUC 100.00 81.97 61.02 | Loss 0.00655 1.37856 2.42985 | TEST P_min -0.254 P_max 0.264 P_norm 0.016715 P_Ratio 0.645
+==== Epoch36 AUC 100.00 81.99 61.31 | Loss 0.00598 1.42151 2.48519 | TEST P_min -0.256 P_max 0.253 P_norm 0.016775 P_Ratio 0.637
+==== Epoch37 AUC 100.00 82.57 61.47 | Loss 0.00487 1.51280 2.64239 | TEST P_min -0.267 P_max 0.317 P_norm 0.016557 P_Ratio 0.643
+==== Epoch38 AUC 100.00 81.73 61.77 | Loss 0.00548 1.50190 2.57175 | TEST P_min -0.292 P_max 0.256 P_norm 0.016852 P_Ratio 0.642
+==== Epoch39 AUC 100.00 81.42 61.54 | Loss 0.00509 1.51365 2.56543 | TEST P_min -0.251 P_max 0.280 P_norm 0.017497 P_Ratio 0.631
+==== Epoch40 AUC 100.00 81.22 61.52 | Loss 0.00494 1.53676 2.58048 | TEST P_min -0.256 P_max 0.291 P_norm 0.018067 P_Ratio 0.630
+==== Epoch41 AUC 100.00 81.36 61.55 | Loss 0.00443 1.57728 2.64935 | TEST P_min -0.344 P_max 0.373 P_norm 0.017938 P_Ratio 0.633
+==== Epoch42 AUC 100.00 81.59 61.89 | Loss 0.00357 1.65148 2.76136 | TEST P_min -0.274 P_max 0.331 P_norm 0.017732 P_Ratio 0.635
+==== Epoch43 AUC 100.00 81.26 62.15 | Loss 0.00335 1.63915 2.72637 | TEST P_min -0.295 P_max 0.293 P_norm 0.017768 P_Ratio 0.638
+==== Epoch44 AUC 100.00 80.99 62.34 | Loss 0.00365 1.57254 2.60273 | TEST P_min -0.292 P_max 0.318 P_norm 0.017409 P_Ratio 0.641
+==== Epoch45 AUC 100.00 80.32 62.46 | Loss 0.00409 1.51292 2.45992 | TEST P_min -0.289 P_max 0.383 P_norm 0.017781 P_Ratio 0.636
+==== Epoch46 AUC 100.00 79.65 62.49 | Loss 0.00459 1.48076 2.37071 | TEST P_min -0.304 P_max 0.327 P_norm 0.017771 P_Ratio 0.642
+==== Epoch47 AUC 100.00 79.71 62.77 | Loss 0.00434 1.46422 2.34539 | TEST P_min -0.274 P_max 0.277 P_norm 0.017875 P_Ratio 0.646
+==== Epoch48 AUC 100.00 80.45 62.97 | Loss 0.00337 1.48616 2.42571 | TEST P_min -0.312 P_max 0.342 P_norm 0.018028 P_Ratio 0.642
+==== Epoch49 AUC 100.00 81.48 63.21 | Loss 0.00266 1.58597 2.61154 | TEST P_min -0.253 P_max 0.265 P_norm 0.018158 P_Ratio 0.641
+==== Epoch50 AUC 100.00 82.05 63.26 | Loss 0.00271 1.61399 2.69204 | TEST P_min -0.258 P_max 0.310 P_norm 0.018040 P_Ratio 0.647
+====== BEST INFOS: EPOCH30 - TRAIN AUC 100.00 | VAL AUC 84.38 | TEST AUC 60.47
+
+
+========================================================================================================================
+total epoch:50 | head layer:3 | tasknet epoch:3 |tasknet lr:0.001 | tasknet lr decay:static | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bbbp | 50-shots | contextpred.pth | seed:0 | runseed:3 | device:0
+TRAIN #-1: 13  #1: 37  #-1/#1: 0.3514
+VAL   #-1: 123  #1: 81  #-1/#1: 1.5185
+TEST  #-1: 96  #1: 108  #-1/#1: 0.8889
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 0.3514
+Dataset: 2039 | Train: 50  Val: 204  Test: 204
+Min Max Mean Median # nodes: 5 34 21.02 21.00 | 9 132 33.44 29.00 | 6 101 27.51 24.00
+First Train Data: Data(id=[1], edge_index=[2, 62], edge_attr=[62, 2], y=[1], x=[28, 2])
+==== Epoch01 AUC 77.13 69.30 54.24 | Loss 0.66173 0.70269 0.69060 | TEST P_min -0.082 P_max 0.064 P_norm 0.003208 P_Ratio 0.639
+==== Epoch20 AUC 100.00 80.59 62.50 | Loss 0.04883 1.12028 1.70760 | TEST P_min -0.234 P_max 0.258 P_norm 0.014294 P_Ratio 0.642
+==== Epoch21 AUC 100.00 81.02 62.90 | Loss 0.03755 1.12437 1.76367 | TEST P_min -0.203 P_max 0.197 P_norm 0.014391 P_Ratio 0.633
+==== Epoch22 AUC 100.00 81.13 62.99 | Loss 0.03026 1.12242 1.79139 | TEST P_min -0.233 P_max 0.228 P_norm 0.014567 P_Ratio 0.643
+==== Epoch23 AUC 100.00 81.58 63.05 | Loss 0.02335 1.15489 1.90688 | TEST P_min -0.290 P_max 0.353 P_norm 0.014820 P_Ratio 0.632
+==== Epoch24 AUC 100.00 82.61 63.38 | Loss 0.01674 1.21649 2.08497 | TEST P_min -0.292 P_max 0.301 P_norm 0.014573 P_Ratio 0.646
+==== Epoch25 AUC 100.00 83.87 63.62 | Loss 0.01362 1.24042 2.21065 | TEST P_min -0.235 P_max 0.238 P_norm 0.014655 P_Ratio 0.635
+==== Epoch26 AUC 100.00 84.06 63.47 | Loss 0.01254 1.20301 2.20285 | TEST P_min -0.288 P_max 0.278 P_norm 0.014715 P_Ratio 0.635
+==== Epoch27 AUC 100.00 83.87 63.32 | Loss 0.01250 1.19201 2.21476 | TEST P_min -0.217 P_max 0.206 P_norm 0.014608 P_Ratio 0.637
+==== Epoch28 AUC 100.00 82.87 63.26 | Loss 0.01445 1.18261 2.15911 | TEST P_min -0.252 P_max 0.221 P_norm 0.014365 P_Ratio 0.638
+==== Epoch29 AUC 100.00 82.02 63.25 | Loss 0.01494 1.22046 2.17422 | TEST P_min -0.229 P_max 0.216 P_norm 0.014470 P_Ratio 0.634
+==== Epoch30 AUC 100.00 82.10 63.16 | Loss 0.01092 1.24282 2.23204 | TEST P_min -0.238 P_max 0.219 P_norm 0.014350 P_Ratio 0.643
+==== Epoch31 AUC 100.00 82.66 62.83 | Loss 0.00734 1.28324 2.32666 | TEST P_min -0.203 P_max 0.219 P_norm 0.014421 P_Ratio 0.644
+==== Epoch32 AUC 100.00 82.88 62.61 | Loss 0.00572 1.32454 2.39991 | TEST P_min -0.270 P_max 0.237 P_norm 0.014654 P_Ratio 0.636
+==== Epoch33 AUC 100.00 81.89 62.44 | Loss 0.00470 1.33266 2.33832 | TEST P_min -0.240 P_max 0.228 P_norm 0.014597 P_Ratio 0.640
+==== Epoch34 AUC 100.00 80.88 62.21 | Loss 0.00404 1.36918 2.32046 | TEST P_min -0.203 P_max 0.204 P_norm 0.014291 P_Ratio 0.640
+==== Epoch35 AUC 100.00 80.58 62.15 | Loss 0.00361 1.41840 2.36417 | TEST P_min -0.221 P_max 0.194 P_norm 0.014430 P_Ratio 0.639
+==== Epoch36 AUC 100.00 80.76 61.81 | Loss 0.00308 1.47037 2.42427 | TEST P_min -0.278 P_max 0.275 P_norm 0.014858 P_Ratio 0.637
+==== Epoch37 AUC 100.00 80.73 61.66 | Loss 0.00274 1.54697 2.50876 | TEST P_min -0.420 P_max 0.302 P_norm 0.015110 P_Ratio 0.641
+==== Epoch38 AUC 100.00 80.42 61.81 | Loss 0.00256 1.56716 2.52622 | TEST P_min -0.279 P_max 0.241 P_norm 0.015006 P_Ratio 0.635
+==== Epoch39 AUC 100.00 79.86 61.77 | Loss 0.00246 1.59656 2.52933 | TEST P_min -0.249 P_max 0.237 P_norm 0.015275 P_Ratio 0.629
+==== Epoch40 AUC 100.00 80.57 62.05 | Loss 0.00242 1.61468 2.62335 | TEST P_min -0.264 P_max 0.290 P_norm 0.014994 P_Ratio 0.650
+==== Epoch41 AUC 100.00 81.99 62.10 | Loss 0.00258 1.64998 2.78310 | TEST P_min -0.280 P_max 0.285 P_norm 0.015578 P_Ratio 0.636
+==== Epoch42 AUC 100.00 82.33 62.28 | Loss 0.00256 1.64619 2.80836 | TEST P_min -0.250 P_max 0.218 P_norm 0.015840 P_Ratio 0.639
+==== Epoch43 AUC 100.00 82.00 62.51 | Loss 0.00258 1.63405 2.76326 | TEST P_min -0.277 P_max 0.226 P_norm 0.015951 P_Ratio 0.638
+==== Epoch44 AUC 100.00 81.21 62.67 | Loss 0.00242 1.64001 2.69533 | TEST P_min -0.305 P_max 0.268 P_norm 0.015922 P_Ratio 0.639
+==== Epoch45 AUC 100.00 80.16 62.46 | Loss 0.00249 1.59689 2.53338 | TEST P_min -0.240 P_max 0.266 P_norm 0.015803 P_Ratio 0.647
+==== Epoch46 AUC 100.00 79.45 62.40 | Loss 0.00296 1.53718 2.39813 | TEST P_min -0.353 P_max 0.268 P_norm 0.016239 P_Ratio 0.640
+==== Epoch47 AUC 100.00 79.65 62.42 | Loss 0.00254 1.51006 2.37758 | TEST P_min -0.300 P_max 0.271 P_norm 0.015985 P_Ratio 0.642
+==== Epoch48 AUC 100.00 80.26 62.35 | Loss 0.00152 1.56641 2.48911 | TEST P_min -0.269 P_max 0.224 P_norm 0.016110 P_Ratio 0.647
+==== Epoch49 AUC 100.00 81.25 62.30 | Loss 0.00131 1.64780 2.65647 | TEST P_min -0.275 P_max 0.275 P_norm 0.016795 P_Ratio 0.642
+==== Epoch50 AUC 100.00 81.72 62.32 | Loss 0.00126 1.68678 2.74972 | TEST P_min -0.314 P_max 0.280 P_norm 0.017038 P_Ratio 0.637
+====== BEST INFOS: EPOCH26 - TRAIN AUC 100.00 | VAL AUC 84.06 | TEST AUC 63.47
+
+
+========================================================================================================================
+total epoch:50 | head layer:3 | tasknet epoch:3 |tasknet lr:0.001 | tasknet lr decay:static | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bbbp | 50-shots | contextpred.pth | seed:0 | runseed:4 | device:0
+TRAIN #-1: 13  #1: 37  #-1/#1: 0.3514
+VAL   #-1: 123  #1: 81  #-1/#1: 1.5185
+TEST  #-1: 96  #1: 108  #-1/#1: 0.8889
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 0.3514
+Dataset: 2039 | Train: 50  Val: 204  Test: 204
+Min Max Mean Median # nodes: 5 34 21.02 21.00 | 9 132 33.44 29.00 | 6 101 27.51 24.00
+First Train Data: Data(id=[1], edge_index=[2, 62], edge_attr=[62, 2], y=[1], x=[28, 2])
+==== Epoch01 AUC 62.99 55.92 49.97 | Loss 0.65544 0.71054 0.69130 | TEST P_min -0.079 P_max 0.066 P_norm 0.003111 P_Ratio 0.642
+==== Epoch20 AUC 100.00 83.56 60.73 | Loss 0.05195 0.99526 1.79022 | TEST P_min -0.214 P_max 0.185 P_norm 0.012928 P_Ratio 0.641
+==== Epoch21 AUC 100.00 83.90 61.03 | Loss 0.04049 1.03485 1.90957 | TEST P_min -0.203 P_max 0.184 P_norm 0.013036 P_Ratio 0.641
+==== Epoch22 AUC 100.00 83.16 61.18 | Loss 0.03287 1.06149 1.91915 | TEST P_min -0.200 P_max 0.245 P_norm 0.012770 P_Ratio 0.642
+==== Epoch23 AUC 100.00 81.82 61.12 | Loss 0.02950 1.11300 1.92655 | TEST P_min -0.219 P_max 0.182 P_norm 0.012751 P_Ratio 0.638
+==== Epoch24 AUC 100.00 81.42 61.33 | Loss 0.02621 1.17339 1.99438 | TEST P_min -0.213 P_max 0.203 P_norm 0.013014 P_Ratio 0.640
+==== Epoch25 AUC 100.00 81.58 61.15 | Loss 0.02129 1.24415 2.12909 | TEST P_min -0.247 P_max 0.285 P_norm 0.013009 P_Ratio 0.643
+==== Epoch26 AUC 100.00 82.79 61.26 | Loss 0.01586 1.37797 2.45983 | TEST P_min -0.193 P_max 0.203 P_norm 0.012973 P_Ratio 0.645
+==== Epoch27 AUC 100.00 83.12 60.84 | Loss 0.01368 1.47277 2.61239 | TEST P_min -0.228 P_max 0.220 P_norm 0.013055 P_Ratio 0.640
+==== Epoch28 AUC 100.00 82.44 60.65 | Loss 0.01131 1.48486 2.58999 | TEST P_min -0.212 P_max 0.206 P_norm 0.012945 P_Ratio 0.638
+==== Epoch29 AUC 100.00 80.83 60.72 | Loss 0.01107 1.41521 2.36384 | TEST P_min -0.280 P_max 0.243 P_norm 0.012812 P_Ratio 0.637
+==== Epoch30 AUC 100.00 80.08 60.75 | Loss 0.01047 1.42177 2.34335 | TEST P_min -0.272 P_max 0.199 P_norm 0.012637 P_Ratio 0.640
+==== Epoch31 AUC 100.00 80.20 60.98 | Loss 0.00889 1.49941 2.47244 | TEST P_min -0.379 P_max 0.370 P_norm 0.012940 P_Ratio 0.636
+==== Epoch32 AUC 100.00 81.61 61.23 | Loss 0.00762 1.54681 2.65771 | TEST P_min -0.243 P_max 0.211 P_norm 0.012847 P_Ratio 0.635
+==== Epoch33 AUC 100.00 82.01 61.68 | Loss 0.00748 1.57054 2.72352 | TEST P_min -0.198 P_max 0.254 P_norm 0.012874 P_Ratio 0.640
+==== Epoch34 AUC 100.00 81.99 61.70 | Loss 0.00691 1.54779 2.67583 | TEST P_min -0.215 P_max 0.208 P_norm 0.013020 P_Ratio 0.640
+==== Epoch35 AUC 100.00 81.70 61.47 | Loss 0.00658 1.54022 2.61866 | TEST P_min -0.208 P_max 0.196 P_norm 0.013231 P_Ratio 0.637
+==== Epoch36 AUC 100.00 81.12 61.31 | Loss 0.00700 1.54187 2.55616 | TEST P_min -0.241 P_max 0.243 P_norm 0.013214 P_Ratio 0.644
+==== Epoch37 AUC 100.00 81.26 61.40 | Loss 0.00717 1.53330 2.54405 | TEST P_min -0.310 P_max 0.286 P_norm 0.013446 P_Ratio 0.640
+==== Epoch38 AUC 100.00 81.93 61.49 | Loss 0.00814 1.51501 2.58526 | TEST P_min -0.245 P_max 0.216 P_norm 0.013764 P_Ratio 0.637
+==== Epoch39 AUC 100.00 82.69 61.67 | Loss 0.00839 1.55018 2.68907 | TEST P_min -0.283 P_max 0.262 P_norm 0.014116 P_Ratio 0.635
+==== Epoch40 AUC 100.00 83.00 61.91 | Loss 0.00804 1.63143 2.81046 | TEST P_min -0.239 P_max 0.214 P_norm 0.014185 P_Ratio 0.636
+==== Epoch41 AUC 100.00 82.18 61.91 | Loss 0.00806 1.70983 2.83852 | TEST P_min -0.236 P_max 0.260 P_norm 0.014028 P_Ratio 0.648
+==== Epoch42 AUC 100.00 80.36 61.84 | Loss 0.00925 1.71778 2.66795 | TEST P_min -0.232 P_max 0.217 P_norm 0.014709 P_Ratio 0.627
+==== Epoch43 AUC 100.00 78.58 61.56 | Loss 0.00739 1.76571 2.58714 | TEST P_min -0.320 P_max 0.274 P_norm 0.015087 P_Ratio 0.636
+==== Epoch44 AUC 100.00 78.21 61.35 | Loss 0.00537 1.78759 2.59456 | TEST P_min -0.259 P_max 0.250 P_norm 0.015075 P_Ratio 0.634
+==== Epoch45 AUC 100.00 78.80 60.97 | Loss 0.00355 1.88350 2.77076 | TEST P_min -0.247 P_max 0.309 P_norm 0.015359 P_Ratio 0.635
+==== Epoch46 AUC 100.00 79.64 60.91 | Loss 0.00300 1.95846 2.93503 | TEST P_min -0.304 P_max 0.245 P_norm 0.015473 P_Ratio 0.643
+==== Epoch47 AUC 100.00 79.36 60.84 | Loss 0.00260 2.00238 2.99151 | TEST P_min -0.257 P_max 0.255 P_norm 0.015618 P_Ratio 0.638
+==== Epoch48 AUC 100.00 78.19 60.65 | Loss 0.00253 1.90524 2.78775 | TEST P_min -0.290 P_max 0.230 P_norm 0.015735 P_Ratio 0.632
+==== Epoch49 AUC 100.00 77.57 60.73 | Loss 0.00305 1.82694 2.66319 | TEST P_min -0.296 P_max 0.252 P_norm 0.015534 P_Ratio 0.642
+==== Epoch50 AUC 100.00 77.84 60.88 | Loss 0.00302 1.82121 2.68908 | TEST P_min -0.256 P_max 0.262 P_norm 0.015874 P_Ratio 0.635
+====== BEST INFOS: EPOCH21 - TRAIN AUC 100.00 | VAL AUC 83.90 | TEST AUC 61.03
+
+
+========================================================================================================================
+total epoch:50 | head layer:3 | tasknet epoch:3 |tasknet lr:0.001 | tasknet lr decay:static | policy lr decay:static |
+ensemble number:3 | max_z:0.1 | penalty discrete:100000.0 | penalty continuous:0.1
+========================================================================================================================
+bbbp | 50-shots | contextpred.pth | seed:0 | runseed:5 | device:0
+TRAIN #-1: 13  #1: 37  #-1/#1: 0.3514
+VAL   #-1: 123  #1: 81  #-1/#1: 1.5185
+TEST  #-1: 96  #1: 108  #-1/#1: 0.8889
+Train Valid Task Ratio: 1.0000 (1/1)
+Train Mean Imbalance Ratio(#-1/#1): 0.3514
+Dataset: 2039 | Train: 50  Val: 204  Test: 204
+Min Max Mean Median # nodes: 5 34 21.02 21.00 | 9 132 33.44 29.00 | 6 101 27.51 24.00
+First Train Data: Data(id=[1], edge_index=[2, 62], edge_attr=[62, 2], y=[1], x=[28, 2])
+==== Epoch01 AUC 80.87 61.15 54.74 | Loss 0.66282 0.70380 0.69061 | TEST P_min -0.053 P_max 0.056 P_norm 0.002851 P_Ratio 0.630
+==== Epoch20 AUC 100.00 80.74 61.90 | Loss 0.04297 1.00718 1.58848 | TEST P_min -0.263 P_max 0.261 P_norm 0.014508 P_Ratio 0.633
+==== Epoch21 AUC 100.00 82.00 62.06 | Loss 0.03310 1.03688 1.74743 | TEST P_min -0.211 P_max 0.254 P_norm 0.014358 P_Ratio 0.635
+==== Epoch22 AUC 100.00 83.42 62.09 | Loss 0.02624 1.09390 1.95603 | TEST P_min -0.231 P_max 0.303 P_norm 0.014456 P_Ratio 0.636
+==== Epoch23 AUC 100.00 83.44 62.23 | Loss 0.02328 1.13566 2.04650 | TEST P_min -0.207 P_max 0.194 P_norm 0.014211 P_Ratio 0.639
+==== Epoch24 AUC 100.00 83.04 62.49 | Loss 0.02068 1.16546 2.10104 | TEST P_min -0.223 P_max 0.250 P_norm 0.014207 P_Ratio 0.636
+==== Epoch25 AUC 100.00 82.86 62.58 | Loss 0.01938 1.14615 2.06548 | TEST P_min -0.266 P_max 0.231 P_norm 0.014178 P_Ratio 0.638
+==== Epoch26 AUC 100.00 82.89 62.64 | Loss 0.01554 1.18982 2.16367 | TEST P_min -0.194 P_max 0.212 P_norm 0.014088 P_Ratio 0.637
+==== Epoch27 AUC 100.00 82.79 62.46 | Loss 0.01268 1.21867 2.22871 | TEST P_min -0.330 P_max 0.375 P_norm 0.014243 P_Ratio 0.638
+==== Epoch28 AUC 100.00 82.02 62.37 | Loss 0.01142 1.22560 2.18309 | TEST P_min -0.218 P_max 0.197 P_norm 0.014377 P_Ratio 0.633
+==== Epoch29 AUC 100.00 82.10 62.46 | Loss 0.01022 1.23727 2.19540 | TEST P_min -0.195 P_max 0.244 P_norm 0.014354 P_Ratio 0.633
+==== Epoch30 AUC 100.00 81.51 62.49 | Loss 0.00979 1.24200 2.14929 | TEST P_min -0.232 P_max 0.214 P_norm 0.014219 P_Ratio 0.638
+==== Epoch31 AUC 100.00 81.96 62.35 | Loss 0.00803 1.24483 2.20195 | TEST P_min -0.201 P_max 0.176 P_norm 0.013971 P_Ratio 0.644
+==== Epoch32 AUC 100.00 82.10 62.38 | Loss 0.00721 1.24941 2.22606 | TEST P_min -0.229 P_max 0.220 P_norm 0.013994 P_Ratio 0.642
+==== Epoch33 AUC 100.00 82.51 62.41 | Loss 0.00664 1.24914 2.25855 | TEST P_min -0.222 P_max 0.222 P_norm 0.014532 P_Ratio 0.633
+==== Epoch34 AUC 100.00 82.97 62.50 | Loss 0.00559 1.27745 2.35832 | TEST P_min -0.232 P_max 0.224 P_norm 0.014555 P_Ratio 0.641
+==== Epoch35 AUC 100.00 83.14 62.43 | Loss 0.00468 1.27865 2.36677 | TEST P_min -0.223 P_max 0.250 P_norm 0.014687 P_Ratio 0.641
+==== Epoch36 AUC 100.00 82.94 62.53 | Loss 0.00414 1.29725 2.37721 | TEST P_min -0.220 P_max 0.250 P_norm 0.014834 P_Ratio 0.636
+==== Epoch37 AUC 100.00 83.04 62.49 | Loss 0.00376 1.31164 2.41083 | TEST P_min -0.268 P_max 0.289 P_norm 0.014829 P_Ratio 0.637
+==== Epoch38 AUC 100.00 82.79 62.73 | Loss 0.00335 1.36562 2.46841 | TEST P_min -0.228 P_max 0.282 P_norm 0.014912 P_Ratio 0.640
+==== Epoch39 AUC 100.00 82.95 62.71 | Loss 0.00321 1.37168 2.48307 | TEST P_min -0.287 P_max 0.267 P_norm 0.015084 P_Ratio 0.645
+==== Epoch40 AUC 100.00 82.77 62.88 | Loss 0.00285 1.35253 2.44391 | TEST P_min -0.216 P_max 0.258 P_norm 0.015362 P_Ratio 0.637
+==== Epoch41 AUC 100.00 83.47 62.88 | Loss 0.00266 1.41270 2.57882 | TEST P_min -0.268 P_max 0.254 P_norm 0.015445 P_Ratio 0.637
+==== Epoch42 AUC 100.00 84.31 62.85 | Loss 0.00269 1.44814 2.71554 | TEST P_min -0.368 P_max 0.377 P_norm 0.015543 P_Ratio 0.645
+==== Epoch43 AUC 100.00 84.08 62.75 | Loss 0.00261 1.40359 2.63461 | TEST P_min -0.231 P_max 0.258 P_norm 0.015871 P_Ratio 0.644
+==== Epoch44 AUC 100.00 83.37 62.91 | Loss 0.00265 1.35368 2.51940 | TEST P_min -0.394 P_max 0.360 P_norm 0.016254 P_Ratio 0.642
+==== Epoch45 AUC 100.00 83.15 62.89 | Loss 0.00273 1.32242 2.47938 | TEST P_min -0.324 P_max 0.255 P_norm 0.016642 P_Ratio 0.635
+==== Epoch46 AUC 100.00 83.07 62.75 | Loss 0.00301 1.30381 2.46356 | TEST P_min -0.280 P_max 0.289 P_norm 0.016954 P_Ratio 0.638
+==== Epoch47 AUC 100.00 83.37 62.80 | Loss 0.00299 1.27485 2.46451 | TEST P_min -0.282 P_max 0.293 P_norm 0.017101 P_Ratio 0.644
+==== Epoch48 AUC 100.00 84.02 62.66 | Loss 0.00278 1.30389 2.57537 | TEST P_min -0.295 P_max 0.280 P_norm 0.017651 P_Ratio 0.640
+==== Epoch49 AUC 100.00 84.59 62.64 | Loss 0.00268 1.29440 2.62040 | TEST P_min -0.333 P_max 0.347 P_norm 0.017932 P_Ratio 0.639
+==== Epoch50 AUC 100.00 84.80 62.81 | Loss 0.00230 1.31792 2.66729 | TEST P_min -0.367 P_max 0.298 P_norm 0.017992 P_Ratio 0.646
+====== BEST INFOS: EPOCH50 - TRAIN AUC 100.00 | VAL AUC 84.80 | TEST AUC 62.81
+
+
+================ AVG_AUC 61.60 ================

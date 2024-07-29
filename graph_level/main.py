@@ -18,14 +18,14 @@ from util import logargs
 
 def set_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', type=str, default='bbbp', help='Root directory of dataset')
+    parser.add_argument('--dataset', type=str, default='bbbp')
     parser.add_argument('--shot_number', type=float, default=50)
     parser.add_argument('--seed', type=int, default=0, help = "Seed for splitting the dataset")
     parser.add_argument('--runseed', type=int, default=1, help = "Seed for minibatch selection, random initialization.")
     parser.add_argument('--device', type=int, default=0, help='Which gpu to use if any')
     parser.add_argument('--check_freq', type=int, default=1, help='The frequency of performing evaluation')
     parser.add_argument('--skip_epoch', type=int, default=20, help='Number of beginning epochs that does not perform evaluation (we determine the best validation epoch after 20 epochs, set 0 for no skipping)')
-    parser.add_argument('--sh_mode', type=int, default=1, help='0 for print detailed training process; 1 for only printing results')
+    parser.add_argument('--sh_mode', type=int, default=1, help='0 for printing detailed training process; 1 for only printing results')
 
     # === GNN Related
     parser.add_argument('--total_epochs', type=int, default=50, help='Number of training epochs (50, 100)')
@@ -36,7 +36,6 @@ def set_args():
     parser.add_argument('--dropout_ratio', type=float, default=0.5, help='Dropout ratio')
     parser.add_argument('--graph_pooling', type=str, default="mean", help='Graph level pooling (sum, mean, max, set2set, attention)')
     parser.add_argument('--JK', type=str, default="last", help='How the node features across layers are combined. last, sum, max or concat')
-    parser.add_argument('--gnn_type', type=str, default="gin")
     parser.add_argument('--gnn_layers', type=int, default=5, help='Number of GNN message passing layers')
     
     # === General Policy Network Related
@@ -74,29 +73,26 @@ def set_args():
     parser.add_argument('--tasknet_train_mode', type=int, default=1, help='Whether apply dropout to GNN when updating tasknet (1 for use; 0 for not use)')
 
     args = parser.parse_args()
-    args = parser.parse_args(args=[
-    '--gnn_file', 'pretrained_models/infomax.pth',
-    '--dataset', 'bbbp',
-    '--seed', '0',
-    '--eval_loader_size', '64',
+    # args = parser.parse_args(args=[
+    # '--gnn_file', 'contextpred.pth',
+    # '--dataset', 'bace',
+    # '--seed', '1',
+    # '--eval_loader_size', '64',
+    # '--minibatch_size', '64',
 
-    '--head_layers', '3',
-    '--total_epochs', '50',
-    '--tasknet_epochs', '1', 
-    '--tasknet_lr', '1e-3',
-    '--tasknet_decay', 'static',
-    '--max_z', '0.1',
-    '--policy_decay', 'down', 
-    '--penalty_alpha_d', '1e5',
+    # '--total_epochs', '50',
+    # '--head_layers', '3',
+    # '--tasknet_epochs', '1', 
+    # '--tasknet_lr', '5e-4',
+    # '--tasknet_decay', 'down',
+    # '--policy_decay', 'static', 
+    # '--max_z', '0.1',
+    # '--penalty_alpha_d', '1e0',
+    # '--tasknet_train_mode', '1',
 
-    '--train_loader_size', '8',
-    '--batch_size', '8',
-    '--minibatch_size', '64',
-
-    '--skip_epoch', '20',
-    '--check_freq', '1',
-    '--sh_mode', '1'
-    ])
+    # '--sh_mode', '0',
+    # '--device', '3'
+    # ])
     if not args.sh_mode:
         logargs(args)
     return args
@@ -146,10 +142,12 @@ def data_preprocess(args):
     else:
         raise ValueError("Invalid dataset name.")
 
-    dataset = MoleculeDataset("dataset/" + args.dataset, dataset=args.dataset)
+    # tmp_root = "../../RLGPT_HPPO/chem/"
+    tmp_root = ""
+    dataset = MoleculeDataset(tmp_root + 'dataset/' + args.dataset, dataset=args.dataset)
     print("{} | {}-shots | {} | seed:{} | runseed:{} | device:{}".format(
           args.dataset, args.shot_number, args.gnn_file, args.seed, args.runseed, args.device))
-    smiles_list = pd.read_csv('dataset/' + args.dataset + '/processed/smiles.csv', header=None)[0].tolist()
+    smiles_list = pd.read_csv(tmp_root + 'dataset/' + args.dataset + '/processed/smiles.csv', header=None)[0].tolist()
     train_dataset, val_dataset, test_dataset = scaffold_split_fewshot(dataset, smiles_list, null_value=0, number_train=args.shot_number, 
                                                                         frac_valid=0.1, frac_test=0.1, seed=args.seed)
 
@@ -186,9 +184,9 @@ def data_preprocess(args):
         test_nodes.min(), test_nodes.max(), test_nodes.mean(), test_nodes.median()))
 
     val_dataset = sorted(val_dataset, key=lambda data: data.num_nodes)
-    val_loader = DataLoader(val_dataset, batch_size=args.eval_loader_size, shuffle=False, num_workers=args.num_workers)
+    val_loader = DataLoader(val_dataset, batch_size=args.eval_loader_size, shuffle=False)
     test_dataset = sorted(test_dataset, key=lambda data: data.num_nodes)
-    test_loader = DataLoader(test_dataset, batch_size=args.eval_loader_size, shuffle=False, num_workers=args.num_workers)
+    test_loader = DataLoader(test_dataset, batch_size=args.eval_loader_size, shuffle=False)
     print("First Train Data:", train_dataset[0])
 
     max_node_num = max([train_nodes.max(), val_nodes.max(), test_nodes.max()]).long().item()
@@ -196,7 +194,7 @@ def data_preprocess(args):
     return train_dataset, val_loader, test_loader, max_node_num, num_tasks
 
 
-def train_loaders_process(args, train_dataset: MoleculeDataset, overlap_ratio=0.2, train_loader_batchsize="total"):
+def train_loaders_process(args, train_dataset: MoleculeDataset, overlap_ratio=0.2):
     torch.manual_seed(args.seed)
     train_dataset = train_dataset.shuffle()
     torch.manual_seed(args.runseed)
@@ -213,28 +211,25 @@ def train_loaders_process(args, train_dataset: MoleculeDataset, overlap_ratio=0.
             train_dataset_list.append(ensemble_dataset)
             labels = torch.cat([ed.y for ed in ensemble_dataset])
             imb_ratios.append(((labels==-1).sum() / (labels==1).sum()).item())
-        ens_loaders = [DataLoader(td, batch_size=args.train_loader_size, shuffle=True, num_workers=args.num_workers) for td in train_dataset_list]
+        ens_loaders = [DataLoader(td, batch_size=args.train_loader_size, shuffle=True) for td in train_dataset_list]
         if not args.sh_mode:
             print("\nPolicy Train Loaders: {}".format([len(tdl) for tdl in train_dataset_list]))
             print("Imbalance Rates(#-1/#1): {}".format([round(ir, 2) for ir in imb_ratios]))
     else:
-        ens_loaders = [DataLoader(train_dataset, batch_size=args.train_loader_size, shuffle=True, num_workers=args.num_workers)]
+        ens_loaders = [DataLoader(train_dataset, batch_size=args.train_loader_size, shuffle=True)]
 
-    if train_loader_batchsize == "total":
-        batch_size = min(len(train_dataset), 128)
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False, num_workers=args.num_workers)
-    else:
-        train_loader = DataLoader(train_dataset, batch_size=args.train_loader_size, shuffle=True, num_workers=args.num_workers)
+    batch_size = min(len(train_dataset), 128)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
 
     return ens_loaders, train_loader
 
 
 def model_setup(args, num_tasks, max_node_num, device):
-    gnn = PromptedGNN(args.gnn_layers, args.emb_dim, args.JK, args.dropout_ratio, args.gnn_type, prompt_type="add").to(device)
+    gnn = PromptedGNN(args.gnn_layers, args.emb_dim, args.JK, args.dropout_ratio).to(device)
     if not args.gnn_file == "":
         if not args.sh_mode:
             print("Loading pretrained gnn weights...")
-        gnn.load_state_dict(torch.load(args.gnn_file, map_location=device))
+        gnn.load_state_dict(torch.load("pretrained_models/"+args.gnn_file, map_location=device))
 
     if not args.sh_mode:
         print("Initializing tasknet linears...")
@@ -243,9 +238,9 @@ def model_setup(args, num_tasks, max_node_num, device):
 
     if not args.sh_mode:
         print("Initializing policy...")
-    policy = H_PPO(gnn, args.policy_d_type, args.ensemble_num, args.penalty_alpha_d, args.penalty_alpha_c, args.emb_dim, max_node_num,
-                   args.max_action_con, args.init_log_std, args.eps_clip_d, args.eps_clip_c, args.coeff_critic,
-                   args.coeff_entropy_d, args.coeff_entropy_c, args.max_norm_grad, device)
+    policy = H_PPO(gnn, args.ensemble_num, args.penalty_alpha_d, args.penalty_alpha_c, args.emb_dim, max_node_num,
+                   args.max_z, args.init_log_std, args.eps_clip_d, args.eps_clip_c, args.coeff_critic,
+                   args.coeff_entropy_d, args.max_norm_grad, device)
     policy_optims = []
     for i in range(args.ensemble_num):
         param_group = []
@@ -259,18 +254,19 @@ def model_setup(args, num_tasks, max_node_num, device):
 
 def main():
     print('PID[{}]'.format(os.getpid()))
-    torch.set_default_dtype(torch.float32)
-    np.set_printoptions(precision=32)
+    torch.set_default_dtype(torch.float64)
+    np.set_printoptions(precision=64)
     
     auc_list = []
+    # run 5 random seeds
     for i in range(1, 6):
         args = set_args()
         args.runseed = i
         device = set_seed(args.runseed, args.device)
         if args.sh_mode:
             print("=" * 120)
-            print("total epoch:{} | tasknet epoch:{} | head layer:{} | tasknet lr:{} | tasknet lr decay:{} | policy lr decay:{} |\n"
-                  "ensemble number:{} | max_z:{} | penalty(discrete):{} | penalty(continuous):{}".format(
+            print("total epoch:{} | head layer:{} | tasknet epoch:{} |tasknet lr:{} | tasknet lr decay:{} | policy lr decay:{} |\n"
+                  "ensemble number:{} | max_z:{} | penalty discrete:{} | penalty continuous:{}".format(
                    args.total_epochs, args.head_layers, args.tasknet_epochs, args.tasknet_lr, args.tasknet_decay, args.policy_decay,
                    args.ensemble_num, args.max_z, args.penalty_alpha_d, args.penalty_alpha_c))
             print("=" * 120)
@@ -278,16 +274,12 @@ def main():
         gnn, tasknet, policy, tasknet_optim, policy_optims = model_setup(args, num_tasks, max_node_num, device)
         ens_loaders, train_loader = train_loaders_process(args, train_dataset)
 
+        # ====== Alternating Training ====== #
         best_infos = None
         aucs = (-1,-1,-1)
-        for warmup_epoch in range(1, args.policy_warmup_epochs+1):
-            policy, tasknet, aucs, best_infos = train_policy(args, warmup_epoch, True, gnn, tasknet, tasknet_optim, policy, policy_optims,
-                                                            ens_loaders, train_loader, val_loader, test_loader, aucs, best_infos, device)
-    
-        # ======== DYNAMIC TRAINING ======= #
-        for policy_epoch in range(1, args.policy_epochs+1):
-            policy, tasknet, aucs, best_infos, r_lists = train_policy(args, policy_epoch, False, gnn, tasknet, tasknet_optim, policy, policy_optims,
-                                                            ens_loaders, train_loader, val_loader, test_loader, aucs, best_infos, device)
+        for epoch in range(1, args.total_epochs + 1):
+            policy, tasknet, aucs, best_infos = train_policy(args, epoch, gnn, tasknet, tasknet_optim, policy, policy_optims,
+                                                             ens_loaders, train_loader, val_loader, test_loader, aucs, best_infos, device)
                
         print("====== BEST INFOS: EPOCH{} - TRAIN AUC {:.2f} | VAL AUC {:.2f} | TEST AUC {:.2f}\n\n".format(*best_infos))
         auc_list.append(best_infos[-1])

@@ -1,11 +1,8 @@
 import torch
-import torch.nn as nn
 from torch_geometric.nn import MessagePassing
-from torch_geometric.utils import add_self_loops, degree, softmax
+from torch_geometric.utils import add_self_loops
 from torch_geometric.nn import global_add_pool, global_mean_pool, global_max_pool, GlobalAttention, Set2Set
 import torch.nn.functional as F
-from torch_scatter import scatter_add
-from torch_geometric.nn.inits import glorot, zeros
 
 num_atom_type = 120  # including the extra mask tokens
 num_chirality_tag = 3
@@ -75,18 +72,14 @@ class PromptedGNN(torch.nn.Module):
         node representations
     """
 
-    def __init__(self, gnn_layers, emb_dim, JK="last", drop_ratio=0, prompt_type="add"):
+    def __init__(self, gnn_layers, emb_dim, JK="last", drop_ratio=0):
         super().__init__()
         self.num_layer = gnn_layers
         self.drop_ratio = drop_ratio
         self.JK = JK
-        self.prompt_type = prompt_type
 
         if self.num_layer < 2:
             raise ValueError("Number of GNN layers must be greater than 1.")
-        
-        if prompt_type not in ['add', 'had']:
-            raise ValueError("Illegal prompt type.")
 
         self.x_embedding1 = torch.nn.Embedding(num_atom_type, emb_dim)
         self.x_embedding2 = torch.nn.Embedding(num_chirality_tag, emb_dim)

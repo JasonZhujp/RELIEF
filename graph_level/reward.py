@@ -1,6 +1,6 @@
-import scipy.signal
 import torch
 import numpy as np
+
 
 class RunningMeanStd:
     # Dynamically calculate mean and std
@@ -53,24 +53,21 @@ class RewardScaling:
         self.R = np.zeros(self.shape)
 
 
-def reward_reshape(rewards, reward_clip=100):
+def reward_reshape(rewards):
     """
     Reshape the rewards of an episode. Return reshaped_rewards.
     """
-    reshaped_rewards = (rewards[:-1] - rewards[1:]).clip(-reward_clip, reward_clip)
-    
-    return reshaped_rewards
+    return rewards[:-1] - rewards[1:]
 
 
-def reshape_reward(rewards, valid_steps, reward_clip=100):
+def reshape_reward(rewards, valid_steps):
     use_steps = valid_steps + 1
     # Use `loss_decrease` as reward
     episode_rewards = []
     for i in range(rewards.size(0)):
         valid_rewards = rewards[i][:use_steps[i]]
         loss_decrease = valid_rewards[:-1] - valid_rewards[1:]
-        episode_reward = torch.clamp(loss_decrease, min=-reward_clip, max=reward_clip)
-        episode_rewards.append(episode_reward.cpu().numpy())
+        episode_rewards.append(loss_decrease.cpu().numpy())
     return episode_rewards
 
 
@@ -82,59 +79,6 @@ def reward_scaling(rewards, reward_scaler):
     reward_scaler.reset()  # When an episode is done, we should reset 'self.R'
 
     return torch.from_numpy(scaled_rewards)
-
-
-def calculate_adv_ret(args, critic, states, rewards, next_states, dones, node_num, reward_trasnform):
-    """
-    Calculate advantage and return-to-go of an epsiode.
-    """
-    device = states[0].device
-    num_episode = len(states)
-    
-    if args.reward_norm_type == "scale":   # [Trick] Reward Scaling
-        # Initialize the std of the rolling reward
-        if reward_trasnform.running_ms.n == 0:
-            for i in range(num_episode):
-                reward_scaling(rewards[i], reward_trasnform)
-        scaled_rewards = []
-        for i in range(num_episode):  # batchsize
-            scaled_rewards.append(reward_scaling(rewards[i], reward_trasnform).squeeze(-1).to(device))
-
-    elif args.reward_norm_type == "norm":
-        if reward_trasnform.running_ms.n == 0:
-            for i in range(num_episode):
-                for reward in rewards[i]:
-                    reward_trasnform.running_ms.update(reward)
-        scaled_rewards = []
-        for i in range(num_episode):
-            step_scaled_rewards = []
-            for reward in rewards[i]:
-                step_scaled_rewards.append(reward_trasnform(reward))
-            scaled_rewards.append(torch.tensor(np.stack(step_scaled_rewards)).squeeze(-1).to(device))
-
-    else:
-        scaled_rewards = []
-        for i in range(num_episode):
-            scaled_rewards.append(torch.from_numpy(rewards[i]).to(device))
-
-    advs, rets = [], []
-    with torch.no_grad():
-        for i in range(num_episode):
-            state_values = critic(states[i])
-            next_state_values = critic(next_states[i])
-            gae = torch.tensor(0).to(device)
-            adv = []
-            # deltas = torch.clamp(scaled_rewards[i], -5, 5) + args.gamma * (1.0 - dones[i]) * next_state_values - state_values
-            deltas = scaled_rewards[i] + args.gamma * (1.0 - dones[i]) * next_state_values - state_values
-            for delta, done in zip(reversed(deltas), reversed(dones[i])):
-                gae = delta + args.gamma * args.lam * gae * (1.0 - done)
-                adv.insert(0, gae)
-            adv = torch.stack(adv)
-            ret = adv + state_values
-            advs.append(adv)
-            rets.append(ret)
-
-    return torch.cat(advs), torch.cat(rets), torch.stack([ret[0] for ret in rets]), scaled_rewards
 
 
 def compute_adv_ret(args, critic, states, rewards, next_states, dones, nodes_per_graph, reward_trasnform):
@@ -156,6 +100,7 @@ def compute_adv_ret(args, critic, states, rewards, next_states, dones, nodes_per
         scaled_rewards.append(torch.tensor(np.stack(step_scaled_rewards)).squeeze(-1).float().to(device))
 
     states = torch.split(states, nodes_per_graph); next_states = torch.split(next_states, nodes_per_graph); dones = torch.split(dones, nodes_per_graph)
+    # compute advantage by GAE
     advs, rets = [], []
     with torch.no_grad():
         for i in range(num_episode):
@@ -163,7 +108,6 @@ def compute_adv_ret(args, critic, states, rewards, next_states, dones, nodes_per
             next_state_values = critic(next_states[i])
             gae = torch.tensor(0).to(device)
             adv = []
-            # deltas = torch.clamp(scaled_rewards[i], -5, 5) + args.gamma * (1.0 - dones[i]) * next_state_values - state_values
             deltas = scaled_rewards[i] + args.gamma * (1.0 - dones[i]) * next_state_values - state_values
             for delta, done in zip(reversed(deltas), reversed(dones[i])):
                 gae = delta + args.gamma * args.lam * gae * (1.0 - done)
