@@ -29,19 +29,11 @@ scikit-learn 1.2.0
 - **Baselines**: Fine-tuning, [GPF](https://github.com/LuckyTiger123/GPF), [GPF-plus](https://github.com/LuckyTiger123/GPF), [SUPT<sub>soft</sub>](https://anonymous.4open.science/r/SUPT-F7B1), [SUPT<sub>hard</sub>](https://anonymous.4open.science/r/SUPT-F7B1) and [All in One](https://github.com/sheldonresearch/ProG). 
 
 - **Running**: For each downstream dataset, the four pre-trained GIN models are used, forming 32 graph classification tasks. You can reproduce the experimental results presented in our paper by running `graph_level/run.sh`, where arguments and hyper-paramter settings are provided.
-<!-- ```shell
-sh run.sh
-``` -->
 
 
 ### Node Classification
 
 - **Datasets**: For node-level tasks, we use Cora, Citeseer, Pubmed and Amazon-Co-Buy (Computer and Photo), which we have already saved as processed (SVD) datasets in the `node_level/dataset` folder. Since we extend feature prompt tuning approaches to node-level tasks by operating on the induced k-hop subgraphs of the target nodes, we provide the code for splitting training, validation, and testing subgraphs in `node_level/preprocess.py`. Note that since fine-tuning or other prompt-based methods do not incorporate subgraph-related designs, we also maintained node indices corresponding to training, validation, and testing node sets in the generated file saved within `node_level/subgraph/split_data`.
-<!-- Note that you can filter a certain set of the target nodes by:
-```python
-# type(data): <class 'torch_geometric.data.data.Data'>
-train_nodes, val_nodes, test_nodes = data.train_mask, data.val_mask, data.test_mask
-``` -->
 
 - **Pre-training**: We use two edge-level pre-training strategies employed in two pioneering work - [GPPT](https://github.com/MingChen-Sun/GPPT) and [GraphPrompt](https://github.com/Starlien95/GraphPrompt), respectively. GPPT used masked edge prediction which is a binary classification pretext task, whereas GraphPrompt used contrastive learning, which determines positive and negative node pairs based on edge connectivity. You can first pre-train GIN models by running `node_level/pretrain_gppt.py` and `node_level/pretrain_gprompt.py`, or directly use the models we provided in the `pretrained_models` directory. 
 

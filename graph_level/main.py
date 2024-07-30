@@ -91,7 +91,7 @@ def set_args():
     # '--tasknet_train_mode', '1',
 
     # '--sh_mode', '0',
-    # '--device', '3'
+    # '--device', '0'
     # ])
     if not args.sh_mode:
         logargs(args)
@@ -142,12 +142,10 @@ def data_preprocess(args):
     else:
         raise ValueError("Invalid dataset name.")
 
-    # tmp_root = "../../RLGPT_HPPO/chem/"
-    tmp_root = ""
-    dataset = MoleculeDataset(tmp_root + 'dataset/' + args.dataset, dataset=args.dataset)
+    dataset = MoleculeDataset('dataset/' + args.dataset, dataset=args.dataset)
     print("{} | {}-shots | {} | seed:{} | runseed:{} | device:{}".format(
           args.dataset, args.shot_number, args.gnn_file, args.seed, args.runseed, args.device))
-    smiles_list = pd.read_csv(tmp_root + 'dataset/' + args.dataset + '/processed/smiles.csv', header=None)[0].tolist()
+    smiles_list = pd.read_csv('dataset/' + args.dataset + '/processed/smiles.csv', header=None)[0].tolist()
     train_dataset, val_dataset, test_dataset = scaffold_split_fewshot(dataset, smiles_list, null_value=0, number_train=args.shot_number, 
                                                                         frac_valid=0.1, frac_test=0.1, seed=args.seed)
 
