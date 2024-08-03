@@ -52,7 +52,7 @@ python main.py --dataset toxcast --seed 5 --eval_loader_size 256 --minibatch_siz
 # GCL
 python main.py --dataset toxcast --seed 5 --eval_loader_size 256 --minibatch_size 64 --gnn_file gcl.pth\
                --total_epochs 50 --head_layers 3 --tasknet_epochs 1 --tasknet_lr 5e-4\
-               --tasknet_decay static --policy_decay down --max_z 0.1 --penalty_alpha_d 1e5
+               --tasknet_decay static --policy_decay static --max_z 0.1 --penalty_alpha_d 1e5
 
 
 # ====== SIDER ====== #
@@ -127,7 +127,7 @@ python main.py --dataset hiv --seed 0 --eval_loader_size 512 --minibatch_size 12
                --tasknet_decay static --policy_decay down --max_z 0.1 --penalty_alpha_d 1e5
 # GCL
 python main.py --dataset hiv --seed 0 --eval_loader_size 512 --minibatch_size 128 --gnn_file gcl.pth\
-               --total_epochs 50 --head_layers 3 --tasknet_epochs 1 --tasknet_lr 5e-4\
+               --total_epochs 50 --head_layers 3 --tasknet_epochs 2 --tasknet_lr 5e-4\
                --tasknet_decay down --policy_decay down --max_z 1.0 --penalty_alpha_d 1e0
 
 
