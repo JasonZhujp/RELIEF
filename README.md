@@ -1,5 +1,5 @@
 # RELIEF
-This repository contains the PyTorch implementation of the paper *RELIEF: Reinforcement Learning Empowered Graph Feature Prompt Tuning*. 
+This repository contains the PyTorch implementation of the paper *RELIEF: Reinforcement Learning Empowered Graph Feature Prompt Tuning*, which is accepted by the SIGKDD 2025.
 
 Inspired by the marginal effect of increasing prompt token length on performance improvement in LLMs, we propose **RELIEF**, a **RE**inforcement **L**earn**I**ng **E**mpowered graph **F**eature prompt tuning method. Our goal is to enhance the performance of pre-trained GNN models on downstream tasks by **incorporating only necessary and lightweight feature prompts** into input graphs.
 
